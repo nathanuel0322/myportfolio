@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import Header from '../src/components/header';
+import TopBlock from './components/topblock';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <TopBlock />
     </div>
   );
 }

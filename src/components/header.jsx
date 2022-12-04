@@ -1,4 +1,5 @@
 import '../assets/css/header.css';
+import Button from './buttons';
 
 export default function Header() {
     return (
@@ -24,11 +25,7 @@ export default function Header() {
                 <li class="nav-item">
                     <a class="nav-link link text-warning" href="https://mobiri.se" data-app-selector=".nav-link,.dropdown-item" data-app-placeholder="Type Text">MY SKILLS</a>
                 </li>
-                <li class="last-nav-item">
-                    <a class="btn btn-md btn-primary" href="https://mobiri.se" data-app-placeholder="Type Text">
-                        CONTACT ME
-                    </a>
-                </li>
+                <Button href={''} text={'CONTACT ME'} />
             </ul>
         </nav>
     );
