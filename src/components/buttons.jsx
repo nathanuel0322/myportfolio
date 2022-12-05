@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function Button({text, href}) {
     const [instyle, setInstyle] = useState({backgroundColor: colors.yellow});
     return (
-        <button className="buttoncomp" style={instyle}
+        <button className="buttoncomp" style={Object.assign({}, instyle, {border: 'none'})}
             onMouseOver={() => {setInstyle({backgroundColor: '#C38000'})}}
             onMouseOut={() => {setInstyle({backgroundColor: colors.yellow})}}
             onClick={() => {document.querySelector(href).scrollIntoView({behavior: 'smooth'})}}

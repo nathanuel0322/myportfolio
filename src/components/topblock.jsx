@@ -34,7 +34,7 @@ export default function TopBlock() {
     }, [])
 
   return (
-    <div className="topblock">
+    <div className="topblock" id="topblock">
         <Header />
         <div className="topblock__content">
             <p className="tbtitle">Welcome to my Portfolio!</p>
