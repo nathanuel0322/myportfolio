@@ -8,13 +8,9 @@
     justify-content: space-between;
     font-family: 'Dosis', sans-serif;
     width: 100%;
-    padding: 0.25rem 0;
+    padding: 0.45rem 0;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-}
-
-.logo {
-    width: 3.5rem;
 }
 
 .navbar-brand {

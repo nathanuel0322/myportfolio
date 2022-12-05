@@ -2,13 +2,22 @@ import { colors } from "../GlobalStyles";
 import '../assets/css/buttons.css';
 import { useState } from "react";
 
-export default function Button({text, href}) {
-    const [instyle, setInstyle] = useState({backgroundColor: colors.yellow});
+export default function Button({text, href, external}) {
+    const isinprogress = text === "In Progress";
+    const [instyle, setInstyle] = useState({backgroundColor: !isinprogress ? colors.yellow : '#C38000'});
     return (
-        <button className="buttoncomp" style={Object.assign({}, instyle, {border: 'none'})}
-            onMouseOver={() => {setInstyle({backgroundColor: '#C38000'})}}
-            onMouseOut={() => {setInstyle({backgroundColor: colors.yellow})}}
-            onClick={() => {document.querySelector(href).scrollIntoView({behavior: 'smooth'})}}
+        <button className="buttoncomp" style={Object.assign({}, instyle, {border: 'none', cursor: isinprogress ? 'default' : 'pointer',})}
+            onMouseOver={() => {if (!isinprogress){setInstyle({backgroundColor: '#C38000'})}}}
+            onMouseOut={() => {if (!isinprogress){setInstyle({backgroundColor: colors.yellow})}}}
+            onClick={() => {
+                if (!isinprogress){
+                    if (external) {
+                        window.open(href, '_blank');
+                    } else {
+                        document.querySelector(href).scrollIntoView({behavior: 'smooth'})
+                    }
+                }
+            }}
         >
             {text}
         </button>

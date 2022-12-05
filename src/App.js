@@ -1,4 +1,5 @@
 import './App.css';
+import MyWork from './components/mywork';
 import Specialized from './components/specialized';
 import TopBlock from './components/topblock';
 
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <TopBlock />
       <Specialized />
+      <MyWork />
     </div>
   );
 }
