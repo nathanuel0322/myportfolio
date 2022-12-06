@@ -1,7 +1,7 @@
 export const projects = [
         // picture, Title, Description and Link
     {
-        picture: "https://play-lh.googleusercontent.com/dt3m6pF2GbbEV6e0rQVJRHugMPiuqmCGOvecdAWkxNfwgK5y2m9FuJjxiJy2v5ZO0A=w240-h480-rw",
+        picture: require('./assets/images/aaa.webp'),
         title: "AAA Maintenance Solutions",
         description: "React Native App that I made to simplify the process of clocking in and out for workers, and scheduling and viewing worker hours for the management at AAA Maintenance Solutions.",
         link1: "https://apps.apple.com/us/app/aaa-maintenance-solutions/id6443511975",

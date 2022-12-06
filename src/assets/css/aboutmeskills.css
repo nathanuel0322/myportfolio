@@ -1,0 +1,31 @@
+.aboutme-skills {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: '5rem 0px';
+    font-family: 'Dosis', sans-serif;
+    color: white;
+    text-align: start;
+}
+
+.aboutme, .skills {
+    width: 50%;
+    padding: 3rem;
+}
+
+.aboutme {
+    background-color: rgb(195, 128, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.aboutme p {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.skills {
+    background-color: black;
+}
