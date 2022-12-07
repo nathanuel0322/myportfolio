@@ -26,22 +26,17 @@ export default function Header() {
                 </button>
             </div>
             <ul class="navbar-nav nav-dropdown">
-                <li class="nav-item">
-                    <button className="nav-link link text-warning" style={{backgroundColor: 'transparent', cursor: 'pointer', border: 'none'}} onClick={() => {document.querySelector("#fortes").scrollIntoView({behavior: 'smooth', block: 'center'})}}>
-                        FORTES
-                    </button>
-                </li>
-                <li class="nav-item">
-                    <button className="nav-link link text-warning" style={{backgroundColor: 'transparent', cursor: 'pointer', border: 'none'}} onClick={() => {document.querySelector("#my-work").scrollIntoView({behavior: 'smooth', block: 'center'})}}>
-                        PROJECTS
-                    </button>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link text-warning" href="https://mobiri.se">ABOUT ME</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link text-warning" href="https://mobiri.se">MY SKILLS</a>
-                </li>
+                {
+                    [{text: "FORTES", id: "fortes"}, {text: "PROJECTS", id: "my-work"}, {text: "ABOUT ME", id: "aboutme-skills"}, {text: "MY SKILLS", id: "aboutme-skills"}].map((item, index) => {
+                        return (
+                            <li class="nav-item" key={index}>
+                                <button className="nav-link link text-warning" style={{backgroundColor: 'transparent', cursor: 'pointer', border: 'none', color: transparent ? "#c1c1c1" : "darkslategray"}} onClick={() => {document.querySelector(`#${item.id}`).scrollIntoView({behavior: 'smooth', block: 'center'})}}>
+                                    {item.text}
+                                </button>
+                            </li>
+                        )
+                    })
+                }
                 <Button href={''} text={'CONTACT ME'} />
             </ul>
         </nav>

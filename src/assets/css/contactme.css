@@ -1,0 +1,38 @@
+.contactme {
+    font-family: "Dosis", sans-serif;
+    font-size: 1rem;
+    display: flex;
+    margin: 5rem 15rem;
+    flex-direction: column;
+}
+
+.title {
+    align-self: flex-start;
+}
+
+.nameemail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input, textarea {
+    font-family: "Dosis", sans-serif;
+    font-size: 1rem;
+}
+
+::placeholder {
+    color: black;
+}
+
+.neinputs {
+    width: 48%;
+}
+
+.contactme > * {
+    margin-bottom: 1rem;
+}
+
+textarea {
+    height: 10rem;
+}
