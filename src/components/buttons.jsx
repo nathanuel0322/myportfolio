@@ -14,7 +14,7 @@ export default function Button({text, href, external}) {
                     if (external) {
                         window.open(href, '_blank');
                     } else {
-                        document.querySelector(href).scrollIntoView({behavior: 'smooth'})
+                        document.querySelector(href).scrollIntoView({behavior: 'smooth', block: 'center'})
                     }
                 }
             }}

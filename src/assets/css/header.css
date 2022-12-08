@@ -39,6 +39,11 @@
     background-color: transparent;
     cursor: pointer;
     border: none;
+    margin-left: 0.5rem;
+}
+
+.logo {
+    transition: all .3s;
 }
 
 ul {
