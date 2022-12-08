@@ -1,9 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import '../assets/css/contactme.css';
 import { colors } from '../GlobalStyles';
 
 export default function ContactMe() {
+    const [hovering, setHovering] = useState(false);
     const form = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
@@ -26,7 +27,7 @@ export default function ContactMe() {
                 <input type="email" name="user_email" placeholder='Email*' className='neinputs' />
             </div>
             <textarea name="message" placeholder='Message*'></textarea>
-            <input type="submit" value="SEND" className='buttoncomp' style={{border: 'none', backgroundColor: colors.yellow, width: '18%'}}/>
+            <input type="submit" value="SEND" className='buttoncomp' style={{border: 'none', backgroundColor: hovering ? '#C38000' : colors.yellow, width: '18%'}} onMouseOver={() => setHovering(true)} onMouseOut={() => setHovering(false)} />
         </form>
     );
 }

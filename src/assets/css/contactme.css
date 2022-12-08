@@ -2,7 +2,7 @@
     font-family: "Dosis", sans-serif;
     font-size: 1rem;
     display: flex;
-    margin: 5rem 15rem;
+    margin: 5rem 20rem;
     flex-direction: column;
 }
 
@@ -26,13 +26,20 @@ input, textarea {
 }
 
 .neinputs {
-    width: 48%;
+    width: 46%;
+    padding: 0.5rem 0.5rem;
 }
 
 .contactme > * {
     margin-bottom: 1rem;
 }
 
+textarea, .neinputs {
+    border: 1px solid #ddd;
+}
+
 textarea {
-    height: 10rem;
+    height: 15rem;
+    padding: 0.5em 0.6em;
+    background-color: white;
 }
