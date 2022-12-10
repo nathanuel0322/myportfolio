@@ -1907,7 +1907,7 @@
   "resolved" "https://registry.npmjs.org/@react-spring/types/-/types-9.5.5.tgz"
   "version" "9.5.5"
 
-"@react-spring/web@^9.5.5", "@react-spring/web@~9.5.5":
+"@react-spring/web@~9.5.5":
   "integrity" "sha512-+moT8aDX/ho/XAhU+HRY9m0LVV9y9CK6NjSRaI+30Re150pB3iEip6QfnF4qnhSCQ5drpMF0XRXHgOTY/xbtFw=="
   "resolved" "https://registry.npmjs.org/@react-spring/web/-/web-9.5.5.tgz"
   "version" "9.5.5"

@@ -5,7 +5,6 @@ import { useSpring, animated } from 'react-spring';
 import { useInView } from 'react-intersection-observer';
 
 export default function Specialized() {
-    // when div comes into view, it will animate in from the bottom
     const [ref, inView] = useInView({
         threshold: 0.5,
         triggerOnce: false
@@ -15,10 +14,7 @@ export default function Specialized() {
         transform: inView ? 'translateY(0px)' : 'translateY(100px)'
     });
     return (
-        <animated.div ref={ref} style={Object.assign({}, props, {display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',  fontFamily: "'Dosis', sans-serif", 
-        // height: '100vh'
-        margin: '5rem 0px'
-        })} className="specialized">
+        <animated.div ref={ref} style={Object.assign({}, props, {display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',  fontFamily: "'Dosis', sans-serif", margin: '5rem 0px'})} className="specialized">
             <p style={{fontSize: '2rem', fontWeight: 300}}>
                 I'M SPE
                 <span style={{borderBottom: '2px solid #232323', paddingBottom: '0.5rem'}}>CIAL</span>
@@ -32,7 +28,6 @@ export default function Specialized() {
                         [<Delivery />, "IMPLEMENTATION", "I'm able to view a design of an app/website and transition it into a seamlessly clean and simplistic product."]
                     ].map((item, index) => {
                         return (
-                            // , width: '90%'
                             <div key={index} className="specialized-item" style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'flex-start', margin: '0 20px', width: index === 1 && '90%'}}>
                                 <div className="specialized-item-icon" style={{margin: '0.25rem 0'}}>
                                     {item[0]}
@@ -40,7 +35,7 @@ export default function Specialized() {
                                 <div className="specialized-item-title" style={{fontSize: '1.5rem', fontWeight: '400', color: '#000000', margin: '0.25rem 0'}}>
                                     {item[1]}
                                 </div>
-                                <div className="specialized-item-description" style={{textAlign: 'left', margin: '0.25rem 0'}}>
+                                <div id="rbp" className="specialized-item-description" style={{textAlign: 'left', margin: '0.25rem 0'}}>
                                     {item[2]}
                                 </div>
                             </div>

@@ -8,6 +8,7 @@
 
 .title {
     align-self: flex-start;
+    font-size: 2rem;
 }
 
 .nameemail {
@@ -42,4 +43,18 @@ textarea {
     height: 15rem;
     padding: 0.5em 0.6em;
     background-color: white;
+}
+
+.formfilled {
+    font-family: "Dosis", sans-serif;
+    height: 29.6rem;
+    margin: 5rem 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sendform {
+    border: none;
 }

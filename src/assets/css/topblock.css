@@ -20,11 +20,12 @@
 }
 
 .topblock__content p {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 .tbtitle {
     font-weight: 700;
+    margin-top: 0px;
 }
 
 .tbdesc {
@@ -34,4 +35,15 @@
 
 .tbcaption {
     font-size: 1.4rem;
+    margin-top: 0px;
+    margin-bottom: 1rem;
+}
+
+#abbuttondiv {
+    padding-top: 1rem;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }

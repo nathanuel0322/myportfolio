@@ -4,6 +4,8 @@ import Header from "./header";
 import '../assets/css/topblock.css';
 import { colors } from "../GlobalStyles";
 import Button from "./buttons";
+import { useInView } from 'react-intersection-observer';
+import { useSpring, animated } from 'react-spring';
 
 export default function TopBlock() {
 	// Create reference to store the DOM element containing the animation
@@ -33,14 +35,23 @@ export default function TopBlock() {
         }
     }, [])
 
+    const [ref, inView] = useInView({
+        /* Optional options */
+        threshold: 0.75,
+        triggerOnce: true
+    });
+    const topblockspring = useSpring({ opacity: inView ? 1 : 0, transform: inView ? 'translateY(0)' : 'translateY(5rem)', config: { duration: 500, bounce: true, frequency: 0.5, damping: 0.5 } });
+
   return (
-    <div className="topblock" id="topblock">
+    <div className="topblock" id="topblock" ref={ref}>
         <Header />
         <div className="topblock__content">
-            <p className="tbtitle">Welcome to my Portfolio!</p>
-            <p style={{color: colors.yellow}}><span className="tbdesc">I am Nathanuel and a </span><span style={{ whiteSpace: 'pre', color: colors.yellow, fontWeight: 700 }} ref={el} /></p>
-            <p className="tbcaption" style={{marginBottom: '2rem'}}>Specialized in Web and App Development</p>
-            <Button href={''} text={'ABOUT ME'} />
+            <animated.p className="tbtitle" style={topblockspring}>Welcome to my Portfolio!</animated.p>
+            <p style={{color: colors.yellow, margin: '0px 0px', paddingBottom: '1rem'}}><span className="tbdesc">I am Nathanuel and a </span><span style={{ whiteSpace: 'pre', color: colors.yellow, fontWeight: 700 }} ref={el} /></p>
+            <animated.p className="tbcaption" style={topblockspring}>Specialized in Web and App Development</animated.p>
+            <animated.div id="abbuttondiv" style={topblockspring}>
+                <Button href={'#aboutme-skills'} text={'ABOUT ME'} />
+            </animated.div>
         </div>
     </div>
   );

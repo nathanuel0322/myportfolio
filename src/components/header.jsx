@@ -33,15 +33,12 @@ export default function Header() {
                         return (
                             <li className="nav-item" key={index}>
                                 <button className="nav-link link text-warning" style={{backgroundColor: 'transparent', cursor: 'pointer', border: 'none', color: transparent ? "#c1c1c1" : "darkslategray"}} onClick={() => {
-                                    document.querySelector(`#${item.id}`).scrollIntoView({behavior: 'smooth', block: 'center'})
-                                    // window scroll to midpoint of element
-                                        // const element = document.querySelector(`#${item.id}`);
-                                        // const elementRect = element.getBoundingClientRect();
-                                        // const absoluteElementTop = elementRect.top + window.pageYOffset;
-                                        // const middle = absoluteElementTop - (window.innerHeight / 2);
-                                        // // subtract 1 rem from middle to account for navbar height
-                                        // window.scrollTo({top: middle - 48, behavior: 'smooth'});
-                                    }}> 
+                                    // if (isNaN(item.id)) {
+                                    const yOffset = item.id === "fortes" ? -300 : item.id === "my-work" ? -150 : item.id === "aboutme-skills" ? -100 : 0;
+                                    const element = document.getElementById(item.id);
+                                    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                                    window.scrollTo({top: y, behavior: 'smooth'});
+                                }}> 
                                     {item.text}
                                 </button>
                             </li>
