@@ -8,7 +8,8 @@
       {
         "ignore": [
           "position: sticky",
-          "padding-inline"
+          "padding-inline",
+          "-webkit-flex-wrap"
         ]
       }
     ]

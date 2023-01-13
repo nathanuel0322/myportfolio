@@ -30,18 +30,24 @@ export default function Header() {
                 <div className="navbar-collapse collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav nav-dropdown">
                         {
-                            [{text: "FORTES", id: "fortes"}, {text: "PROJECTS", id: "my-work"}, {text: "ABOUT ME", id: "aboutme-skills"}, {text: "MY SKILLS", id: "aboutme-skills"}].map((item, index) => {
+                            [{text: "FORTES", id: "fortes"}, {text: "PROJECTS", id: "my-work"}, {text: "ABOUT ME", id: "aboutme-skills"}, 
+                                {text: "MY SKILLS", id: "aboutme-skills"}
+                            ].map((item, index) => {
                                 return (
                                     <li className="nav-item" key={index}>
-                                        <button className="nav-link link text-warning" style={{backgroundColor: 'transparent', cursor: 'pointer', border: 'none', color: transparent ? "#c1c1c1" : "darkslategray"}} onClick={() => {
+                                        {/* <a class="nav-link link text-warning display-4" href="#"> */}
+                                        <a className="nav-link link text-warning display-4" style={{color: transparent ? "#c1c1c1" : "darkslategray"}} 
+                                            href={`#${item.id}`}
+                                        // onClick={() => {
                                             // if (isNaN(item.id)) {
-                                            const yOffset = item.id === "fortes" ? -300 : item.id === "my-work" ? -150 : item.id === "aboutme-skills" ? -100 : 0;
-                                            const element = document.getElementById(item.id);
-                                            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                                            window.scrollTo({top: y, behavior: 'smooth'});
-                                        }}> 
+                                            // const yOffset = item.id === "fortes" ? -300 : item.id === "my-work" ? -150 : item.id === "aboutme-skills" ? -100 : 0;
+                                            // const element = document.getElementById(item.id);
+                                            // const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                                            // window.scrollTo({top: y, behavior: 'smooth'});
+                                            // }}
+                                        > 
                                             {item.text}
-                                        </button>
+                                        </a>
                                     </li>
                                 )
                             })

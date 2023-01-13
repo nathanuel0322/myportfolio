@@ -17,7 +17,12 @@ section {
 .navbar-dropdown.navbar-fixed-top {
     position: fixed;
 }
-
+.cid-rzMrgNeUFf .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0;
+}
+.cid-rzMrgNeUFf .nav-dropdown .link {
+    margin: 1.667em 1.667em;
+}
 .navbar {
     display: flex;
     -webkit-align-items: center;
@@ -126,21 +131,41 @@ ul {
 
 .nav-link, .btn {
     text-decoration: none;
-    padding-inline: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.9rem;
 }
-
+.section-btn a.btn:not(.btn-form) {
+    border-radius: 100px;
+}
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+.btn-primary, .btn-primary:active, .btn-primary.active {
+    background-color: #ffbc00 !important;
+    border-color: #ffbc00 !important;
+    color: #ffffff !important;
+}
+.btn-md {
+    padding: 0.8rem 2rem;
+    font-weight: 600 !important;
+    letter-spacing: 2px;
+    margin: .4rem .8rem !important;
+    transition: all .3s ease-in-out;
+}
+.display-4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8rem;
+}
 .btn {
-    padding: 0.6rem 2rem;
-    background-color: #ffbc00;
-    border-radius: 25px;
-    color: white;
     font-weight: 500;
 }
-
+.btn {
+    border-width: 2px;
+    font-style: normal;
+    white-space: normal;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-word;
+}
 /* .navbar-nav {
     list-style-type: none;
     display: flex;
@@ -193,6 +218,25 @@ nav .section-btn {
     margin-bottom: 0;
     list-style: none;
 } */
+.cid-rzMrgNeUFf a.nav-link {
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    outline: none;
+    letter-spacing: 2px;
+}
+.nav-dropdown .link {
+    padding: .667em 1.667em !important;
+    margin: 0 !important;
+    font-weight: 500;
+    transition: color .2s ease-in-out;
+}
+.navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+}
 ul, ol, pre, blockquote {
     margin-bottom: 2.3125rem;
 }
@@ -225,5 +269,9 @@ dl, ol, ul {
     .navbar-expand-lg .navbar-nav {
         -ms-flex-direction: row;
         flex-direction: row;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
     }
 }

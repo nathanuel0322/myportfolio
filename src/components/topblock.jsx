@@ -1,6 +1,5 @@
 import { useRef, useEffect } from "react";
 import Typed from "typed.js";
-import Header from "./header";
 import '../assets/css/topblock.css';
 import { colors } from "../GlobalStyles";
 import Button from "./buttons";
@@ -43,16 +42,24 @@ export default function TopBlock() {
     const topblockspring = useSpring({ opacity: inView ? 1 : 0, transform: inView ? 'translateY(0)' : 'translateY(5rem)', config: { duration: 500, bounce: true, frequency: 0.5, damping: 0.5 } });
 
   return (
-    <div className="topblock" id="topblock" ref={ref}>
-        <Header />
-        <div className="topblock__content">
-            <animated.p className="tbtitle" style={topblockspring}>Welcome to my Portfolio!</animated.p>
-            <p style={{color: colors.yellow, margin: '0px 0px', paddingBottom: '1rem'}}><span className="tbdesc">I am Nathanuel and a </span><span style={{ whiteSpace: 'pre', color: colors.yellow, fontWeight: 700 }} ref={el} /></p>
-            <animated.p className="tbcaption" style={topblockspring}>Specialized in Web and App Development</animated.p>
-            <animated.div id="abbuttondiv" style={topblockspring}>
-                <Button href={'#aboutme-skills'} text={'ABOUT ME'} />
-            </animated.div>
+    <section className="header2 cid-rzMt37x8iA fullscreen" id="header2-8">
+        <div className="container" id="topblock" ref={ref}>
+            <div className="row">
+                <div className="white col-md-12">
+                    <animated.h1 className="section-title white bold fonts-style display-1" style={topblockspring}>Welcome to my Portfolio!</animated.h1>
+                    <div className="typed-text pb-3 display-1">
+                        <span className="section-subtitle fonts-style white display-1">I am Nathanuel and a </span>
+                        <span style={{ whiteSpace: 'pre', color: colors.yellow, fontWeight: 700 }} ref={el} />
+                    </div>
+                    <animated.p className="section-text fonts-style display-5" style={topblockspring}>
+                        Specialized in Web and App Development
+                    </animated.p>
+                    <animated.div className="pt-3 section-btn" style={topblockspring}>
+                        <a className="btn-primary btn btn-md display-4" type="submit" href="#aboutme-skills">ABOUT ME</a>
+                    </animated.div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
   );
 }

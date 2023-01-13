@@ -1,0 +1,25 @@
+.pb-3, .py-3 {
+    padding-bottom: 1rem !important;
+}
+.display-5 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.4rem;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .display-3, .display-4 {
+    line-height: 1;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0 !important;
+    margin-bottom: .5rem !important;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
