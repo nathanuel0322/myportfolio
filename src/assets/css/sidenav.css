@@ -1,0 +1,36 @@
+.MuiDrawer-paperAnchorRight {
+    background-color: #c1c1c1 !important;
+    width: 53% !important;
+    padding: 1rem 2rem;
+}
+
+.linkdiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Play", sans-serif;
+    font-size: 20;
+    font-weight: 600;
+}
+
+.linkdiv > a {
+    text-decoration: none;
+    color: black; 
+    font-family: "Dosis", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: .665rem 1rem;               
+}
+
+#innerbutton {
+    text-align: center;
+    color: black;
+    border-color: #ffbc00;
+    border-radius: 40px;
+    text-transform: uppercase;
+    padding: .625rem 2rem;
+    width: 45%;
+    border: 2px solid;
+    background-color: #ffbc00;
+}

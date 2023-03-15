@@ -39,17 +39,19 @@ export default function TopBlock() {
         threshold: 0.75,
         triggerOnce: true
     });
-    const topblockspring = useSpring({ opacity: inView ? 1 : 0, transform: inView ? 'translateY(0)' : 'translateY(5rem)', config: { duration: 500, bounce: true, frequency: 0.5, damping: 0.5 } });
+    const topblockspring = useSpring({ opacity: inView ? 1 : 0, transform: inView ? 'translateY(0)' : 'translateY(5rem)', 
+        config: { duration: 500, bounce: true, frequency: 0.5, damping: 0.5 }
+    });
 
   return (
     <section className="header2 cid-rzMt37x8iA fullscreen" id="header2-8">
         <div className="container" id="topblock" ref={ref}>
             <div className="row">
                 <div className="white col-md-12">
-                    <animated.h1 className="section-title white bold fonts-style display-1" style={topblockspring}>Welcome to my Portfolio!</animated.h1>
-                    <div className="typed-text pb-3 display-1">
-                        <span className="section-subtitle fonts-style white display-1">I am Nathanuel and a </span>
-                        <span style={{ whiteSpace: 'pre', color: colors.yellow, fontWeight: 700 }} ref={el} />
+                    <animated.h1 className="section-title white bold fonts-style display-1-top" style={topblockspring}>Welcome to my Portfolio!</animated.h1>
+                    <div className="typed-text pb-3 display-1-top">
+                        <span className="section-subtitle fonts-style white display-1-top">I am Nathanuel and a </span>
+                        <span className="animated-element bold" style={{ whiteSpace: 'pre', color: colors.yellow, fontWeight: 700 }} ref={el} />
                     </div>
                     <animated.p className="section-text fonts-style display-5" style={topblockspring}>
                         Specialized in Web and App Development

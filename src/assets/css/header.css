@@ -120,7 +120,14 @@ section {
     border: none;
     margin-left: 0.5rem;
 }
-
+.drawerbutton {
+    background-color: transparent;
+    border: none;
+    color: #c1c1c1;
+    font-size: 3rem;
+    padding: 0 0;
+    display: flex;
+}
 .logo {
     transition: all .3s;
 }
@@ -153,6 +160,7 @@ ul {
 .display-4 {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.8rem;
+    padding: 0.667em 1.667em !important;
 }
 .btn {
     font-weight: 500;
@@ -187,6 +195,22 @@ ul {
 }
 .last-nav-item {
     text-align: center;
+}
+.nav-item {
+    list-style-type: none;
+    margin: auto;
+}
+.navbar-collapse {
+    display: flex;
+    flex-direction: column;
+}
+.link {
+    /* margin: 0.667em 1.667em; */
+    font-weight: 500;
+    padding: 0;
+    font-size: 1rem;
+    transition: color .2s ease-in-out;
+    letter-spacing: 2px;
 }
 .cid-rzMrgNeUFf ul.navbar-nav {
     flex-wrap: wrap;
@@ -273,5 +297,8 @@ dl, ol, ul {
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: .5rem;
         padding-left: .5rem;
+    }
+    .drawerbutton {
+        display: none;
     }
 }

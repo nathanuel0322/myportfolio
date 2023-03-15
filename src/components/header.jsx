@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import {FiMenu} from 'react-icons/fi';
 import '../assets/css/header.css';
 
-export default function Header() {
+export default function Header({drawerfunc}) {
+    const [topdrawer, setTopDrawer] = useState(false)
     // if page position is at the top, then the header is transparent, otherwise it is not
     const [transparent, setTransparent] = useState(true);
     useEffect(() => {
@@ -21,7 +24,9 @@ export default function Header() {
             <animated.nav className={`navbar navbar-dropdown navbar-fixed-top navbar-expand-lg ${!transparent && 'navbar-short'}`} style={navspring}>
                 <div className="navbar-brand">
                     <span className="navbar-logo">
-                        <animated.img src={require("../assets/images/circlelogo.png")} alt="Logo" className='logo' style={{ width: !transparent ? '3rem' : '3.75rem' }} />
+                        <animated.img src={require("../assets/images/circlelogo.png")} alt="Logo" className='logo'
+                            style={{ width: !transparent ? '3rem' : '3.75rem' }}
+                        />
                     </span>
                     <button className="navbar-caption" onClick={() => {document.querySelector('#topblock').scrollIntoView({behavior: 'smooth'})}}>
                         Nathanuel's Portfolio
@@ -53,13 +58,43 @@ export default function Header() {
                             })
                         }
                     </ul>
-                    <div class="navbar-buttons section-btn">
-                        <a class="btn btn-md btn-primary display-4" href="#contactme">
+                    <div className="navbar-buttons section-btn">
+                        <a className="btn btn-md btn-primary display-4" href="#contactme">
                             CONTACT ME
                         </a>
                     </div>
                 </div>
+                <button className='drawerbutton' onClick={() => drawerfunc(true)}><FiMenu /></button>
             </animated.nav>
+            {/* <SwipeableDrawer
+                anchor={"top"}
+                open={topdrawer}
+                onClose={() => {console.log("drawer closed"); setTopDrawer(false)}}
+                onOpen={() => console.log("drawer opened")}
+            >
+                <div class="navbar-collapse collapse show" id="navbarSupportedContent">
+                    {
+                        [{text: "FORTES", id: "fortes"}, {text: "PROJECTS", id: "my-work"}, {text: "ABOUT ME", id: "aboutme-skills"}, 
+                            {text: "MY SKILLS", id: "aboutme-skills"}
+                        ].map((item, index) => {
+                            return (
+                                <li className="nav-item" key={index}>
+                                    <a className="nav-link link text-warning display-4" style={{color: transparent ? "#c1c1c1" : "darkslategray"}} 
+                                        href={`#${item.id}`}
+                                    > 
+                                        {item.text}
+                                    </a>
+                                </li>
+                            )
+                        })
+                    }
+                    <div className="navbar-buttons section-btn">
+                        <a className="btn btn-md btn-primary display-4" href="#contactme">
+                            CONTACT ME
+                        </a>
+                    </div>
+                </div>
+            </SwipeableDrawer> */}
         </section>
     );
 }
