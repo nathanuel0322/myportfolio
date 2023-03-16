@@ -39,7 +39,9 @@ export default function TopBlock() {
         threshold: 0.75,
         triggerOnce: true
     });
-    const topblockspring = useSpring({ opacity: inView ? 1 : 0, transform: inView ? 'translateY(0)' : 'translateY(5rem)', 
+    const topblockspring = useSpring({
+        opacity: inView ? 1 : 0,
+        // transform: inView ? 'translateY(0)' : 'translateY(5rem)', 
         config: { duration: 500, bounce: true, frequency: 0.5, damping: 0.5 }
     });
 

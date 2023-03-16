@@ -10,20 +10,27 @@ export default function ContactMe() {
     const [formfilled, setFormfilled] = useState(false);
     const sendEmail = (e) => {
         e.preventDefault();
-        const formbutton = document.getElementById("sendform");
-        formbutton.disabled = true;
-        formbutton.value = "Sending...";
-        emailjs.sendForm('service_rb0yd56', 'template_879ls1m', '#contactme', 'dbCtiR00Etae1Fo2Q')
-        .then((result) => {
-            setFormfilled(true);
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
+        // if any of the inputs or textarea are empty, then don't send the email
+        if (e.target[0].value === '' || e.target[1].value === '' || e.target[2].value === '') {
+            alert('Please fill out all the fields');
+            return;
+        }
+        else {
+            const formbutton = document.getElementById("sendform");
+            formbutton.disabled = true;
+            formbutton.value = "Sending...";
+            emailjs.sendForm('service_rb0yd56', 'template_879ls1m', '#contactme', 'dbCtiR00Etae1Fo2Q')
+            .then((result) => {
+                setFormfilled(true);
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        }
     };
     const [ref, InView] = useInView({
         threshold: 0.5,
-        triggerOnce: false
+        triggerOnce: true
     });
     const props = useSpring({
         opacity: InView ? 1 : 0,

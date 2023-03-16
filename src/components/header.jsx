@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
-import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import {FiMenu} from 'react-icons/fi';
 import '../assets/css/header.css';
 
 export default function Header({drawerfunc}) {
-    const [topdrawer, setTopDrawer] = useState(false)
     // if page position is at the top, then the header is transparent, otherwise it is not
     const [transparent, setTransparent] = useState(true);
+
     useEffect(() => {
         window.addEventListener('scroll', () => {
             if (window.scrollY === 0) {
@@ -28,9 +27,9 @@ export default function Header({drawerfunc}) {
                             style={{ width: !transparent ? '3rem' : '3.75rem' }}
                         />
                     </span>
-                    <button className="navbar-caption" onClick={() => {document.querySelector('#topblock').scrollIntoView({behavior: 'smooth'})}}>
+                    <a className="navbar-caption" href={"#header2-8"}>
                         Nathanuel's Portfolio
-                    </button>
+                    </a>
                 </div>
                 <div className="navbar-collapse collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav nav-dropdown">
@@ -40,19 +39,17 @@ export default function Header({drawerfunc}) {
                             ].map((item, index) => {
                                 return (
                                     <li className="nav-item" key={index}>
-                                        {/* <a class="nav-link link text-warning display-4" href="#"> */}
-                                        <a className="nav-link link text-warning display-4" style={{color: transparent ? "#c1c1c1" : "darkslategray"}} 
-                                            href={`#${item.id}`}
-                                        // onClick={() => {
-                                            // if (isNaN(item.id)) {
-                                            // const yOffset = item.id === "fortes" ? -300 : item.id === "my-work" ? -150 : item.id === "aboutme-skills" ? -100 : 0;
-                                            // const element = document.getElementById(item.id);
-                                            // const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                                            // window.scrollTo({top: y, behavior: 'smooth'});
-                                            // }}
+                                        <div className="nav-link link text-warning display-4" style={{color: transparent ? "#c1c1c1" : "darkslategray"}} 
+                                            // href={`#${item.id}`}
+                                            onClick={() => {
+                                                window.scrollTo({top: document.getElementById(`${item.id}`).getBoundingClientRect().top 
+                                                    + window.pageYOffset, behavior: 'smooth'
+                                                });
+                                                drawerfunc(false)
+                                            }} 
                                         > 
                                             {item.text}
-                                        </a>
+                                        </div>
                                     </li>
                                 )
                             })
@@ -66,35 +63,6 @@ export default function Header({drawerfunc}) {
                 </div>
                 <button className='drawerbutton' onClick={() => drawerfunc(true)}><FiMenu /></button>
             </animated.nav>
-            {/* <SwipeableDrawer
-                anchor={"top"}
-                open={topdrawer}
-                onClose={() => {console.log("drawer closed"); setTopDrawer(false)}}
-                onOpen={() => console.log("drawer opened")}
-            >
-                <div class="navbar-collapse collapse show" id="navbarSupportedContent">
-                    {
-                        [{text: "FORTES", id: "fortes"}, {text: "PROJECTS", id: "my-work"}, {text: "ABOUT ME", id: "aboutme-skills"}, 
-                            {text: "MY SKILLS", id: "aboutme-skills"}
-                        ].map((item, index) => {
-                            return (
-                                <li className="nav-item" key={index}>
-                                    <a className="nav-link link text-warning display-4" style={{color: transparent ? "#c1c1c1" : "darkslategray"}} 
-                                        href={`#${item.id}`}
-                                    > 
-                                        {item.text}
-                                    </a>
-                                </li>
-                            )
-                        })
-                    }
-                    <div className="navbar-buttons section-btn">
-                        <a className="btn btn-md btn-primary display-4" href="#contactme">
-                            CONTACT ME
-                        </a>
-                    </div>
-                </div>
-            </SwipeableDrawer> */}
         </section>
     );
 }

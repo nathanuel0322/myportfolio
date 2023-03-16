@@ -2,15 +2,32 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    /* margin: '5rem 0px'; */
     font-family: 'Dosis', sans-serif;
     color: white;
     text-align: start;
+    height: 80vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
 }
-
+@media (min-width: 1120px) {
+    #aboutme-skills {
+        padding-top: 15vh;
+    }
+}
 .aboutme, .skills {
     width: 50%;
     padding: 3rem;
+}
+@media (max-width: 768px) {
+    #aboutme-skills {
+        flex-direction: column;
+        min-height: 80vh;
+        height: auto;
+    }
+    .aboutme, .skills {
+        max-width: 100%;
+        width: auto;
+    }
 }
 
 .aboutme {
@@ -27,5 +44,37 @@
 }
 
 .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: black;
+    font-size: 1.3rem;
+}
+
+.aboutme > a {
+    text-decoration: none;
+}
+
+.skills > :first-child > span, .skill > :first-child > :last-child {
+    color: #ffbc00;
+}
+.skill {
+    margin: 0.75rem 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.skill > :first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.skill-bar {
+    width: 100%;
+    height: 0.4rem;
+    background-color: white;
+}
+.skill-bar > div {
+    background-color: #ffbc00;
+    height: 100%;
 }

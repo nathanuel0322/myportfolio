@@ -1,9 +1,58 @@
-.contactme {
+#contactme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-family: "Dosis", sans-serif;
     font-size: 1rem;
+    margin: 0px auto;
+    height: 80vh;
+    padding: 10vh 0px;
+}
+.nameemail {
     display: flex;
-    margin: 5rem 20rem;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@media (max-width: 768px) {.nameemail {
+        flex-direction: column;
+        margin-bottom: 0px !important;
+    }
+    .nameemail > * {
+        margin-bottom: 1rem;
+        max-width: 100%;
+        width: auto !important;
+    }
+}
+@media (max-width: 576px) {
+    #contactme {
+        margin: 0px 2rem;
+    }
+}
+@media (min-width: 576px) {
+    #contactme {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    #contactme {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    #contactme {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    #contactme {
+        max-width: 1140px !important;
+    }
+}
+#contactme > :first-child {
+    color: white;
+}
+#contactme > div > *, #contactme > textarea {
+    border-radius: 10px;
 }
 
 .title {
@@ -11,15 +60,10 @@
     font-size: 2rem;
 }
 
-.nameemail {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 
 input, textarea {
     font-family: "Dosis", sans-serif;
-    font-size: 1rem;
+    font-size: 1.25rem;
 }
 
 ::placeholder {
@@ -28,13 +72,11 @@ input, textarea {
 
 .neinputs {
     width: 46%;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5em 0.6em;
 }
-
-.contactme > * {
+#contactme > *:not(:last-child) {
     margin-bottom: 1rem;
 }
-
 textarea, .neinputs {
     border: 1px solid #ddd;
 }

@@ -9,8 +9,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: "Play", sans-serif;
-    font-size: 20;
+    font-family: "Dosis", sans-serif;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -21,6 +21,11 @@
     font-size: 1rem;
     font-weight: 600;
     margin: .665rem 1rem;               
+}
+
+.linkdiv > * {
+    margin: 0.5rem auto;
+    cursor: pointer;
 }
 
 #innerbutton {

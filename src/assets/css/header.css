@@ -138,6 +138,7 @@ ul {
 
 .nav-link, .btn {
     text-decoration: none;
+    cursor: pointer;
 }
 .section-btn a.btn:not(.btn-form) {
     border-radius: 100px;
@@ -151,7 +152,7 @@ ul {
     color: #ffffff !important;
 }
 .btn-md {
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 2rem !important;
     font-weight: 600 !important;
     letter-spacing: 2px;
     margin: .4rem .8rem !important;
@@ -160,7 +161,7 @@ ul {
 .display-4 {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.8rem;
-    padding: 0.667em 1.667em !important;
+    padding: 0.667em 1.667em;
 }
 .btn {
     font-weight: 500;
@@ -199,10 +200,6 @@ ul {
 .nav-item {
     list-style-type: none;
     margin: auto;
-}
-.navbar-collapse {
-    display: flex;
-    flex-direction: column;
 }
 .link {
     /* margin: 0.667em 1.667em; */
@@ -283,7 +280,7 @@ dl, ol, ul {
     }
     .navbar-expand-lg .navbar-collapse {
         display: -ms-flexbox !important;
-        display: flex !important;
+        display: flex;
         -ms-flex-preferred-size: auto;
         flex-basis: auto;
     }
@@ -298,7 +295,20 @@ dl, ol, ul {
         padding-right: .5rem;
         padding-left: .5rem;
     }
+}
+@media (max-width: 1140px) {
+    .navbar-expand-lg > .collapse {
+        display: none;
+    }
+}
+@media (min-width: 1140px) {
     .drawerbutton {
         display: none;
+    }
+}
+@media (max-width: 768px) {
+    .navbar-caption {
+        font-size: calc( 1.35rem + (2 - 1.35) * ((100vw - 20rem) / (48 - 20)));
+        line-height: calc( 1.4 * (1.35rem + (2 - 1.35) * ((100vw - 20rem) / (48 - 20))));
     }
 }

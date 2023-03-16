@@ -88,7 +88,7 @@
 }
 .display-1-top {
     font-family: 'Dosis', sans-serif;
-    font-size: 3.5rem !important;
+    font-size: 3.5rem;
 }
 .section-title {
     font-style: normal;
@@ -122,28 +122,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1-top, .display-2
     word-wrap: break-word;
 }
 .display-1-top {
-    font-size: 6rem;
+    font-size: 3.5rem;
     font-weight: 300;
     line-height: 1.2;
 }
-@media (min-width: 768px) {
-    .container, .container-md, .container-sm {
-        max-width: 720px !important;
-    }
-    .col-md-12 {
-        /* -ms-flex: 0 0 100%;
-        flex: 0 0 100%; */
-        max-width: 100%;
-    }
-}
-@media (min-width: 1200px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
-        max-width: 1140px !important;
-    }
-}
-@media (min-width: 992px) {
-    .container, .container-lg, .container-md, .container-sm {
-        max-width: 960px !important;
+@media (max-width: 768px) {
+    .display-1-top {
+        font-size: calc( 1.875rem + (3.5 - 1.875) * ((100vw - 20rem) / (48 - 20)));
+        line-height: calc( 1.4 * (1.875rem + (3.5 - 1.875) * ((100vw - 20rem) / (48 - 20)))) !important;
     }
 }
 @media (min-width: 576px) {
@@ -151,10 +137,23 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1-top, .display-2
         max-width: 540px;
     }
 }
-@media (max-width: 768px) {
-    .display-1-top {
-        font-size: 2.8rem;
-        font-size: calc( 1.875rem + (3.5 - 1.875) * ((100vw - 20rem) / (48 - 20)));
-        line-height: calc( 1.4 * (1.875rem + (3.5 - 1.875) * ((100vw - 20rem) / (48 - 20)))) !important;
+@media (min-width: 768px) {
+    .container, .container-md, .container-sm {
+        max-width: 720px;
+    }
+    .col-md-12 {
+        /* -ms-flex: 0 0 100%;
+        flex: 0 0 100%; */
+        max-width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .container, .container-lg, .container-md, .container-sm {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1140px !important;
     }
 }
