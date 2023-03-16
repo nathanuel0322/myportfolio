@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/myportfolio/static/css/main.f720933f.css",
-    "main.js": "/myportfolio/static/js/main.ca930ded.js",
+    "main.css": "/myportfolio/static/css/main.9ce596f3.css",
+    "main.js": "/myportfolio/static/js/main.88f1cdf1.js",
     "static/media/circlelogo.png": "/myportfolio/static/media/circlelogo.cb0a2ef1a27355c16b91.png",
     "static/media/aaa.webp": "/myportfolio/static/media/aaa.e7ec74771cf2939b14b3.webp",
     "static/media/mobu.JPG": "/myportfolio/static/media/mobu.391439d918a433115234.JPG",
@@ -9,11 +9,11 @@
     "static/media/mbri-apple.svg": "/myportfolio/static/media/mbri-apple.8054f749316f43fa575ea88612656ebb.svg",
     "static/media/mbri-delivery.svg": "/myportfolio/static/media/mbri-delivery.bca613924726255dfd778afb6b4f3f97.svg",
     "index.html": "/myportfolio/index.html",
-    "main.f720933f.css.map": "/myportfolio/static/css/main.f720933f.css.map",
-    "main.ca930ded.js.map": "/myportfolio/static/js/main.ca930ded.js.map"
+    "main.9ce596f3.css.map": "/myportfolio/static/css/main.9ce596f3.css.map",
+    "main.88f1cdf1.js.map": "/myportfolio/static/js/main.88f1cdf1.js.map"
   },
   "entrypoints": [
-    "static/css/main.f720933f.css",
-    "static/js/main.ca930ded.js"
+    "static/css/main.9ce596f3.css",
+    "static/js/main.88f1cdf1.js"
   ]
 }
