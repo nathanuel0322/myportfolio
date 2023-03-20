@@ -2,7 +2,6 @@ import { useRef, useEffect } from "react";
 import Typed from "typed.js";
 import '../assets/css/topblock.css';
 import { colors } from "../GlobalStyles";
-import Button from "./buttons";
 import { useInView } from 'react-intersection-observer';
 import { useSpring, animated } from 'react-spring';
 
