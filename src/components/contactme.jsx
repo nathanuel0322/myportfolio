@@ -20,12 +20,12 @@ export default function ContactMe() {
             formbutton.disabled = true;
             formbutton.value = "Sending...";
             emailjs.sendForm('service_rb0yd56', 'template_879ls1m', '#contactme', 'dbCtiR00Etae1Fo2Q')
-            .then((result) => {
-                setFormfilled(true);
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+                .then((result) => {
+                    setFormfilled(true);
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
         }
     };
     const [ref, InView] = useInView({
@@ -56,6 +56,7 @@ export default function ContactMe() {
                     <input type="email" name="user_email" placeholder='Email*' className='neinputs' />
                 </animated.div>
                 <animated.textarea style={textareaprops} name="message" placeholder='Message*'></animated.textarea>
+                <input type="email" value="nathan0322@hotmail.com" name='to_email' style={{display: 'none'}} />
                 <animated.input type="submit" value="SEND" className='buttoncomp' id="sendform" style={Object.assign({}, props, {backgroundColor: hovering ? '#C38000' : colors.yellow})} onMouseOver={() => setHovering(true)} onMouseOut={() => setHovering(false)} />
             </animated.form>
     );
