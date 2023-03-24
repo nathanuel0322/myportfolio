@@ -3,12 +3,10 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .cid-rzMrgNeUFf .navbar-dropdown {
     padding: .5rem 1rem;
     position: fixed;
 }
-
 .cid-rzMrgNeUFf .navbar {
     min-height: 77px;
     transition: all .3s;
@@ -93,21 +91,6 @@ section {
     -ms-flex-align: center;
     align-items: center;
 }
-/* .navbar-brand {
-    display: flex;
-    -webkit-flex-shrink: 0;
-    flex-shrink: 0;
-    -webkit-align-items: center;
-    align-items: center;
-    margin-right: 0;
-    padding: 0;
-    transition: all .3s;
-    word-break: break-word;
-    z-index: 1;
-    column-gap: 1rem;
-    margin-left: 1rem;
-} */
-
 .navbar-caption {
     font-family: 'Dosis', sans-serif;
     line-height: inherit !important;
@@ -140,11 +123,9 @@ ul {
     text-decoration: none;
     cursor: pointer;
 }
-.section-btn a.btn:not(.btn-form) {
-    border-radius: 100px;
-}
 .btn:not(:disabled):not(.disabled) {
     cursor: pointer;
+    border-radius: 100px;
 }
 .btn-primary, .btn-primary:active, .btn-primary.active {
     background-color: #ffbc00 !important;
@@ -175,16 +156,6 @@ ul {
     justify-content: center;
     word-break: break-word;
 }
-/* .navbar-nav {
-    list-style-type: none;
-    display: flex;
-    padding-left: 0px;
-    margin-right: 1rem;
-    letter-spacing: 2px;
-    align-items: center;
-    margin: 0.5rem 1rem;
-    margin-left: 0px;
-} */
 .navbar-nav {
     display: -ms-flexbox;
     display: flex;
@@ -202,7 +173,6 @@ ul {
     margin: auto;
 }
 .link {
-    /* margin: 0.667em 1.667em; */
     font-weight: 500;
     padding: 0;
     font-size: 1rem;
@@ -218,27 +188,17 @@ ul {
     font-weight: 500;
     height: auto !important;
 }
-.cid-rzMrgNeUFf .navbar-buttons {
+#contactmebutton {
     text-align: center;
-}
-nav .section-btn {
     margin-left: 0rem;
     margin-right: 0rem;
+    cursor: pointer;
+    border-radius: 100px;
 }
 .section-btn {
     margin-left: -.25rem;
     margin-right: -.25rem;
-    font-size: 0;
 }
-/* .navbar-nav {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-} */
 .cid-rzMrgNeUFf a.nav-link {
     display: flex;
     -webkit-align-items: center;

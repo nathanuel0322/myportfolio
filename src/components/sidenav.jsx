@@ -19,18 +19,19 @@ export default function TemporaryDrawer({drawerstate, drawerfunc}) {
                 </div>
                 <div className='linkdiv'>
                     {
-                        [{text: "FORTES", id: "fortes"}, {text: "PROJECTS", id: "my-work"}, {text: "ABOUT ME", id: "aboutme-skills"}, 
-                            {text: "MY SKILLS", id: "aboutme-skills"}, {text: "CONTACT ME", id: "contactme"}
+                        [{text: "FORTES", id: "fortes"}, {text: "PROJECTS", id: "my-work"}, {text: "ABOUT ME", id: "aboutme"}, 
+                            {text: "MY SKILLS", id: "skills"}, {text: "CONTACT ME", id: "contactme"}
                         ].map((item, index) => (
                             <div key={index} 
                                 onClick={() => {
+                                    console.log("wpy:", window.pageYOffset)
                                     window.scrollTo({top: document.getElementById(`${item.id}`).getBoundingClientRect().top + 
-                                        window.pageYOffset, behavior: 'smooth'
+                                        (window.pageYOffset) - (window.innerHeight * 0.05), behavior: 'smooth'
                                     });
                                     drawerfunc(false)
                                 }} 
-                                id={index === 4 && 'innerbutton'}
-                                className={index === 4 && "btn btn-md bold btn-primary-outline display-7"}
+                                id={index === 4 ? 'innerbutton' : undefined}
+                                className={index === 4 ? "btn btn-md bold btn-primary-outline display-7" : undefined}
                             >
                                 {item.text}
                             </div>

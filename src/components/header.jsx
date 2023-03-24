@@ -34,8 +34,8 @@ export default function Header({drawerfunc}) {
                 <div className="navbar-collapse collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav nav-dropdown">
                         {
-                            [{text: "FORTES", id: "fortes"}, {text: "PROJECTS", id: "my-work"}, {text: "ABOUT ME", id: "aboutme-skills"}, 
-                                {text: "MY SKILLS", id: "aboutme-skills"}
+                            [{text: "FORTES", id: "fortes"}, {text: "PROJECTS", id: "my-work"}, {text: "ABOUT ME", id: "aboutme"}, 
+                                {text: "MY SKILLS", id: "skills"}
                             ].map((item, index) => {
                                 return (
                                     <li className="nav-item" key={index}>
@@ -43,7 +43,9 @@ export default function Header({drawerfunc}) {
                                             // href={`#${item.id}`}
                                             onClick={() => {
                                                 window.scrollTo({top: document.getElementById(`${item.id}`).getBoundingClientRect().top 
-                                                    + window.pageYOffset, behavior: 'smooth'
+                                                    + window.pageYOffset - ((item.id === 'aboutme' || item.id === 'skills') ? 
+                                                    (window.innerHeight * 0.15) : (item.id === 'aboutme') && (window.innerHeight * 0.15)),
+                                                    behavior: 'smooth'
                                                 });
                                                 drawerfunc(false)
                                             }} 
@@ -55,10 +57,12 @@ export default function Header({drawerfunc}) {
                             })
                         }
                     </ul>
-                    <div className="navbar-buttons section-btn">
-                        <a className="btn btn-md btn-primary display-4" href="#contactme">
-                            CONTACT ME
-                        </a>
+                    <div id='contactmebutton' className="section-btn btn btn-md btn-primary display-4" onClick={() =>
+                        window.scrollTo({top: document.getElementById("contactme").getBoundingClientRect().top 
+                            + window.pageYOffset - (window.innerHeight * 0.05), behavior: 'smooth'
+                        })}
+                    >
+                        CONTACT ME
                     </div>
                 </div>
                 <button className='drawerbutton' onClick={() => drawerfunc(true)}><FiMenu /></button>

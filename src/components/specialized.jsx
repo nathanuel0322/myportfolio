@@ -7,7 +7,7 @@ import '../assets/css/specialized.css';
 
 export default function Specialized() {
     const [ref, inView] = useInView({
-        threshold: 0.5,
+        threshold: window.innerWidth < 768 ? 0.2 : 0.5,
         triggerOnce: true
     });
     const props = useSpring({

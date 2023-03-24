@@ -56,7 +56,7 @@ export default function ContactMe() {
                     <input type="email" name="user_email" placeholder='Email*' className='neinputs' />
                 </animated.div>
                 <animated.textarea style={textareaprops} name="message" placeholder='Message*'></animated.textarea>
-                <input type="email" value="nathan0322@hotmail.com" name='to_email' style={{display: 'none'}} />
+                <input type="email" value="nathan0322@hotmail.com" name='to_email' style={{display: 'none'}} readOnly={true} />
                 <animated.input type="submit" value="SEND" className='buttoncomp' id="sendform" style={Object.assign({}, props, {backgroundColor: hovering ? '#C38000' : colors.yellow})} onMouseOver={() => setHovering(true)} onMouseOut={() => setHovering(false)} />
             </animated.form>
     );

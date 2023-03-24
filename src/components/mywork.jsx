@@ -6,7 +6,7 @@ import '../assets/css/mywork.css'
 
 export default function MyWork() {
     const [ref, inView] = useInView({
-        threshold: 0.5,
+        threshold: window.innerWidth < 768 ? 0.2 : 0.5,
         triggerOnce: true
     });
     const props = useSpring({

@@ -35,7 +35,7 @@ export default function TopBlock() {
 
     const [ref, inView] = useInView({
         /* Optional options */
-        threshold: 0.75,
+        threshold: 0.5,
         triggerOnce: true
     });
     const topblockspring = useSpring({
