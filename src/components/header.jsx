@@ -27,9 +27,9 @@ export default function Header({drawerfunc}) {
                             style={{ width: !transparent ? '3rem' : '3.75rem' }}
                         />
                     </span>
-                    <a className="navbar-caption" href={"#header2-8"}>
+                    <div className="navbar-caption" onClick={() => {window.scrollTo({top: 0, behavior: 'smooth'})}}>
                         Nathanuel's Portfolio
-                    </a>
+                    </div>
                 </div>
                 <div className="navbar-collapse collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav nav-dropdown">
@@ -40,7 +40,6 @@ export default function Header({drawerfunc}) {
                                 return (
                                     <li className="nav-item" key={index}>
                                         <div className="nav-link link text-warning display-4" style={{color: transparent ? "#c1c1c1" : "darkslategray"}} 
-                                            // href={`#${item.id}`}
                                             onClick={() => {
                                                 window.scrollTo({top: document.getElementById(`${item.id}`).getBoundingClientRect().top 
                                                     + window.pageYOffset - ((item.id === 'aboutme' || item.id === 'skills') ? 

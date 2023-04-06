@@ -24,7 +24,6 @@ export default function TemporaryDrawer({drawerstate, drawerfunc}) {
                         ].map((item, index) => (
                             <div key={index} 
                                 onClick={() => {
-                                    console.log("wpy:", window.pageYOffset)
                                     window.scrollTo({top: document.getElementById(`${item.id}`).getBoundingClientRect().top + 
                                         (window.pageYOffset) - (window.innerHeight * 0.05), behavior: 'smooth'
                                     });

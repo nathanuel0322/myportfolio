@@ -7,6 +7,14 @@ section {
     padding: .5rem 1rem;
     position: fixed;
 }
+@media (max-width: 349px) {
+    .cid-rzMrgNeUFf .navbar-dropdown {
+        padding: .5rem 0.75rem;
+    }
+    .logo {
+        width: 15vw !important;
+    }
+}
 .cid-rzMrgNeUFf .navbar {
     min-height: 77px;
     transition: all .3s;

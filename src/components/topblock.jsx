@@ -58,7 +58,13 @@ export default function TopBlock() {
                         Specialized in Web and App Development
                     </animated.p>
                     <animated.div className="pt-3 section-btn" style={topblockspring}>
-                        <a className="btn-primary btn btn-md display-4" type="submit" href="#aboutme-skills">ABOUT ME</a>
+                        <div className="btn-primary btn btn-md display-4" onClick={() => {
+                            window.scrollTo({top: document.getElementById("aboutme-skills").getBoundingClientRect().top + 
+                                (window.pageYOffset) - (window.innerHeight * 0.05), behavior: 'smooth'
+                            })
+                        }}>
+                            ABOUT ME
+                        </div>
                     </animated.div>
                 </div>
             </div>

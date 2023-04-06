@@ -34,9 +34,14 @@ export default function MyWork() {
                                     {item.title}
                                 </div>
                                 <div></div>
-                                <div className="my-work-item-description">
-                                    {item.description}
-                                </div>
+                                <ul className="my-work-item-description">
+                                    {/* {item.description} */}
+                                    {item.description.split(".").map((item, index) => {
+                                        return (
+                                            <li>{item}</li>
+                                        )
+                                    })}
+                                </ul>
                                 <Button href={item.link1} text={item.inprogress ? "In Progress" : "View Project"} external={true} />
                             </div>
                         )  

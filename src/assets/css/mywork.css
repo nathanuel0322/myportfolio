@@ -64,6 +64,11 @@
 .my-work-item-description {
     text-align: center;
     margin: 2rem 0;
+    list-style-type: disc;
+}
+.my-work-item-description > li::marker {
+    content: "→";
+    color: orange;
 }
 .my-work-item > div > img {
     width: 100%;

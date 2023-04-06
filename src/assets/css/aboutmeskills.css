@@ -37,6 +37,12 @@
     align-items: flex-start;
     justify-content: center;
 }
+#aboutme > :last-child{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1vw;
+}
 
 .aboutme p {
     font-size: 1.4rem;
