@@ -17,37 +17,35 @@ export default function Specialized() {
         transform: inView ? 'translateY(0px)' : 'translateY(100px)',
     })
     return (
-        <animated.section ref={ref} style={props} className="cid-rzMr7rM4hq" id="fortes">
-            <div>
-                <h2 className='section-title align-center display-2'>
-                    I'M SPE
-                    <span>CIAL</span>
-                    IZED IN
-                </h2>
-                <animated.div className="justify-content-center pt-5" id="specialtypes" ref={ref} style={textprops}>
-                    {
-                        [
-                            [<Global />, "WEB DEVELOPMENT", "I have built several websites, most built on ReactJS, for businesses in the Tri-State Area, and am currently working on various projects."],
-                            [<Apple />, "APP DEVELOPMENT", "I've completed an app that eases viewing worker hours and clocking in and out for a small contracting business in New York City. I am also actively working on another app that will greatly help to expand the customer base of urban small businesses."],
-                            [<Delivery />, "IMPLEMENTATION", "I'm able to view a design of an app/website and transition it into a seamlessly clean and simplistic product."]
-                        ].map((item, index) => {
-                            return (
-                                <div key={index} className="col-md-6 row-item col-lg-4">
-                                    <div className="card-img align-left">
-                                        {item[0]}
-                                    </div>
-                                    <h4>
-                                        {item[1]}
-                                    </h4>
-                                    <p id="rbp" className="text display-7">
-                                        {item[2]}
-                                    </p>
+        <animated.div ref={ref} style={props} className="cid-rzMr7rM4hq" id="fortes">
+            <h2 className='section-title align-center display-2'>
+                I'M SPE
+                <span>CIAL</span>
+                IZED IN
+            </h2>
+            <animated.div className="justify-content-center pt-5" id="specialtypes" ref={ref} style={textprops}>
+                {
+                    [
+                        [<Global />, "WEB DEVELOPMENT", "I have built several websites, most built on ReactJS, for businesses in the Tri-State Area, and am currently working on various projects."],
+                        [<Apple />, "APP DEVELOPMENT", "I've completed an app that eases viewing worker hours and clocking in and out for a small contracting business in New York City. I am also actively working on another app that will greatly help to expand the customer base of urban small businesses."],
+                        [<Delivery />, "IMPLEMENTATION", "I'm able to view a design of an app/website and transition it into a seamlessly clean and simplistic product."]
+                    ].map((item, index) => {
+                        return (
+                            <div key={index} className="col-md-6 row-item col-lg-4">
+                                <div className="card-img align-left">
+                                    {item[0]}
                                 </div>
-                            )
-                        })
-                    }
-                </animated.div>
-            </div>
-        </animated.section>
+                                <h4>
+                                    {item[1]}
+                                </h4>
+                                <p id="rbp" className="text display-7">
+                                    {item[2]}
+                                </p>
+                            </div>
+                        )
+                    })
+                }
+            </animated.div>
+        </animated.div>
     );
 }

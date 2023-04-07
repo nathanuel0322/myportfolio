@@ -27,14 +27,11 @@ export default function TopBlock() {
         typed.current = new Typed(el.current, options);
         
         return () => {
-            // Make sure to destroy Typed instance during cleanup
-            // to prevent memory leaks
             typed.current.destroy();
         }
     }, [])
 
     const [ref, inView] = useInView({
-        /* Optional options */
         threshold: 0.5,
         triggerOnce: true
     });
@@ -52,6 +49,7 @@ export default function TopBlock() {
                     <animated.h1 className="section-title white bold fonts-style display-1-top" style={topblockspring}>Welcome to my Portfolio!</animated.h1>
                     <div className="typed-text pb-3 display-1-top">
                         <span className="section-subtitle fonts-style white display-1-top">I am Nathanuel and a </span>
+                        <br id="midspanbr" />
                         <span className="animated-element bold" style={{ whiteSpace: 'pre', color: colors.yellow, fontWeight: 700 }} ref={el} />
                     </div>
                     <animated.p className="section-text fonts-style display-5" style={topblockspring}>

@@ -60,6 +60,18 @@
 .aboutme > a {
     text-decoration: none;
 }
+#resumebutton {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    transition: all .3s;
+}
+#resumebutton:hover {
+    background-color: gray;
+}
 
 .skills > :first-child > span, .skill > :first-child > :last-child {
     color: #ffbc00;

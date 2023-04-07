@@ -2,6 +2,7 @@ import '../assets/css/aboutmeskills.css'
 import { useSpring, animated } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 import {ReactComponent as Github} from '../assets/icons/githubicon.svg'
+import Resume from "../assets/files/MyResume.pdf"
 
 export default function AboutMeSkills() {
     const [aboutref, aboutinView] = useInView({
@@ -36,6 +37,9 @@ export default function AboutMeSkills() {
                     </a>
                     <a href='https://github.com/nathanuel0322' target='_blank' rel='noreferrer'>
                         <Github />
+                    </a>
+                    <a href={`${Resume}#zoom=62`} without rel='noreferrer' target='_blank' id="resumebutton">
+                        View Resume
                     </a>
                 </animated.div>
             </animated.div>

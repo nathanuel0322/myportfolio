@@ -10,13 +10,10 @@
     background-color: #000000;
 }
 .fullscreen {
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
     display: flex;
     -webkit-align-items: center;
     align-items: center;
-    min-height: 88vh;
+    min-height: 85vh;
     padding-top: 3rem;
     padding-bottom: 3rem;
 }
@@ -126,6 +123,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1-top, .display-2
     font-weight: 300;
     line-height: 1.2;
 }
+#midspanbr {
+    display: block;
+}
 @media (max-width: 768px) {
     .display-1-top {
         font-size: calc( 1.875rem + (3.5 - 1.875) * ((100vw - 20rem) / (48 - 20)));
@@ -155,5 +155,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .display-1-top, .display-2
 @media (min-width: 1200px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 1140px !important;
+    }
+    #midspanbr {
+        display: none;
     }
 }

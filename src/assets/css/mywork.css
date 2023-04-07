@@ -42,10 +42,12 @@
     .my-work-item {
         max-width: 100%;
         width: auto;
+        max-width: 75%;
+        margin-block: 1rem;
     }
 }
 .my-work-item > :first-child {
-    height: 15rem;
+    /* height: 15rem; */
     width: 15rem;
     display: flex;
     align-items: center;
@@ -63,15 +65,21 @@
 }
 .my-work-item-description {
     text-align: center;
-    margin: 2rem 0;
+    margin: 1rem 0;
     list-style-type: disc;
+    padding-left: 1rem;
+}
+.my-work-item-description > li {
+    text-align: left;
+    padding-left: 1rem;
+    margin-block: 1vh;
 }
 .my-work-item-description > li::marker {
     content: "→";
     color: orange;
 }
 .my-work-item > div > img {
-    width: 100%;
     height: auto;
     border-radius: 10px;
+    width: 50%;
 }

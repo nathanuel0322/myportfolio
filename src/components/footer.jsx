@@ -1,18 +1,20 @@
-import { useState } from 'react'
 import '../assets/css/footer.css'
-import { colors } from '../GlobalStyles'
+import {ReactComponent as Github} from '../assets/icons/githubicon.svg'
+import Resume from "../assets/files/MyResume.pdf"
 
 export default function Footer() {
-    const [buttonhover, setButtonHover] = useState(false)
     return (
         <div className='footer'>
             <p>Nathanuel's Portfolio</p>
             <div className='footericons'>
-                <a className='icon' href='https://www.linkedin.com/in/nathanueldixon0322/' target='_blank' rel='noreferrer' style={{backgroundColor: buttonhover ? colors.yellow : 'transparent', borderRadius: '50%'}}
-                    onMouseEnter={() => setButtonHover(true)}
-                    onMouseLeave={() => setButtonHover(false)}
-                >
-                    <img src={require('../assets/icons/linkedin.png')} alt='LinkedIn' style={{width: '2rem'}} />
+                <a href='https://www.linkedin.com/in/nathanueldixon0322/' target='_blank' rel='noreferrer' id="linkedina">
+                    <img src={require('../assets/icons/linkedin.png')} alt='LinkedIn' />
+                </a>
+                <a href='https://github.com/nathanuel0322' target='_blank' rel='noreferrer' id="githuba">
+                    <Github className='gitfooter'/>
+                </a>
+                <a href={`${Resume}#zoom=62`} without rel='noreferrer' target='_blank' id="bottomresume">
+                    View Resume
                 </a>
             </div>
         </div>
