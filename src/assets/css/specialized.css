@@ -1,14 +1,15 @@
 .cid-rzMr7rM4hq {
     padding-top: 10vh;
     padding-bottom: 10vh;
-    height: 80vh;
+    min-height: 80vh;
     background-color: #ffffff;
     font-family: Dosis, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-inline: 1rem;
 }
-.cid-rzMr7rM4hq * {
+.cid-rzMr7rM4hq *:not(.section-title > span) {
     background-color: white;
 }
 #specialtypes > :last-child {
