@@ -1,10 +1,12 @@
 {
   "files": {
     "main.css": "/myportfolio/static/css/main.9b821a23.css",
-    "main.js": "/myportfolio/static/js/main.0075e30b.js",
+    "main.js": "/myportfolio/static/js/main.7be899d1.js",
     "static/media/circlelogo.png": "/myportfolio/static/media/circlelogo.cb0a2ef1a27355c16b91.png",
     "static/media/MyResume.pdf": "/myportfolio/static/media/MyResume.bbd22812e1fe198f5f17.pdf",
     "static/media/aaa.webp": "/myportfolio/static/media/aaa.e7ec74771cf2939b14b3.webp",
+    "static/media/PortCalc.jpeg": "/myportfolio/static/media/PortCalc.180ee041677befeae50e.jpeg",
+    "static/media/boofysupply.jpg": "/myportfolio/static/media/boofysupply.7c45444e702e0825029e.jpg",
     "static/media/truck.png": "/myportfolio/static/media/truck.0334a263bac9865179e1.png",
     "static/media/mbri-globe-2.svg": "/myportfolio/static/media/mbri-globe-2.f295e18d835a72aba81e1d906ee2cbb6.svg",
     "static/media/mbri-apple.svg": "/myportfolio/static/media/mbri-apple.8054f749316f43fa575ea88612656ebb.svg",
@@ -12,10 +14,10 @@
     "index.html": "/myportfolio/index.html",
     "static/media/githubicon.svg": "/myportfolio/static/media/githubicon.972c1bdac153e372a1d536fb1ba03daa.svg",
     "main.9b821a23.css.map": "/myportfolio/static/css/main.9b821a23.css.map",
-    "main.0075e30b.js.map": "/myportfolio/static/js/main.0075e30b.js.map"
+    "main.7be899d1.js.map": "/myportfolio/static/js/main.7be899d1.js.map"
   },
   "entrypoints": [
     "static/css/main.9b821a23.css",
-    "static/js/main.0075e30b.js"
+    "static/js/main.7be899d1.js"
   ]
 }
