@@ -15,9 +15,10 @@ export default function MyWork() {
     const textprops = useSpring({
         transform: inView ? 'translateY(0px)' : 'translateY(100px)',
     })
+    
     return (
         <animated.div id="my-work" ref={ref} style={props}>
-            <p>
+            <p style={{display: window.innerWidth > 500 ? 'block' : 'flex'}}>
                 MY
                 <span> WO</span>
                 RK

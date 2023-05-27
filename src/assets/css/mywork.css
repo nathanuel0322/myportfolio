@@ -6,7 +6,6 @@
     justify-content: center;
     color: white;
     padding: 10vh 0px;
-    /* height: 80vh; */
     min-height: 80vh;
 }
 #my-work > :nth-child(1) {
@@ -21,16 +20,17 @@
     margin-top: 2rem;
     display: flex;
     flex-direction: row;
-    max-width: 80vw;
+    max-width: 90%;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .my-work-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 1rem;
-    width: 33%;
+    margin: 1rem;
+    width: 29%;
 }
 @media (max-width: 768px) {
     #my-work > :nth-child(2) {

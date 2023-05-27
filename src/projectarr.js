@@ -28,5 +28,12 @@ export const projects = [
         description: "ReactJS site designed for a mobile gaming business in New Jersey.Features a streamlined slideshow with fluid pop-up animations.Mobile-friendly design.Created an API connected to Firebase Storage, allowing business owners to easily upload new images to their slideshow.Includes a contact form that sends an email to the business owners when a user submits a message, powered by EmailJS",
         link1: "http://www.tripleamobilegaming.com/#/",
         inprogress: false,
+    },
+    {
+        picture: require("./assets/images/truck.png"),
+        title: "San Francisco Food Trucks",
+        description: "ReactJS site that displays a list of food trucks in San Francisco, using data from the San Francisco Data API.Includes a search bar that filters the list of food trucks based on the user's input.Light and dark mode for user preference.Clean linear gradients for modern look.Smooth animations for truck information display",
+        link1: "https://nathanuel0322.github.io/foodtruckmap/",
+        inprogress: false
     }
 ]
