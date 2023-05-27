@@ -35,5 +35,19 @@ export const projects = [
         description: "ReactJS site that displays a list of food trucks in San Francisco, using data from the San Francisco Data API.Includes a search bar that filters the list of food trucks based on the user's input.Light and dark mode for user preference.Clean linear gradients for modern look.Smooth animations for truck information display",
         link1: "https://nathanuel0322.github.io/foodtruckmap/",
         inprogress: false
-    }
+    },
+    {
+        picture: require("./assets/images/boofysupply.jpg"),
+        title: "Boofy Supply",
+        description: "HTML/CSS/JS integrated into Wix for clean and modern UI design.Hover styles for buttons and links to improve user experience.Added contact form for customer inquiries and feedback.Various ways to contact the business, including phone number, email, and social media links",
+        link1: "https://www.boofysupplyllc.com/",
+        inprogress: false
+    },
+    {
+        picture: require("./assets/images/PortCalc.jpeg"),
+        title: "NCP's Portfolio Calculator",
+        description: "ReactJS site, built on ViteJS, using TailwindCSS for styling, that calculates the value of a portfolio based on the user's input of stock symbols, their respective allocations, the start date, and the end date.Uses the AlphaVantage API to fetch stock data and calculate the value of the portfolio.Integrated Firebase for user authentication and storage of user's previous searches.Applied Recharts to seamlessly display a pie chart and line chart of the portfolio's value over time.Allows user to view past searches and view the results of those searches",
+        link1: "https://ncp-portfolio-tracker.netlify.app/",
+        inprogress: false
+    },
 ]

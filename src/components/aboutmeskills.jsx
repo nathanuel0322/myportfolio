@@ -38,7 +38,7 @@ export default function AboutMeSkills() {
                     <a href='https://github.com/nathanuel0322' target='_blank' rel='noreferrer'>
                         <Github />
                     </a>
-                    <a href={`${Resume}#zoom=62`} without rel='noreferrer' target='_blank' id="resumebutton">
+                    <a href={`${Resume}#zoom=62`} rel='noreferrer' target='_blank' id="resumebutton">
                         View Resume
                     </a>
                 </animated.div>

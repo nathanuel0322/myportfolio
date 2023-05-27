@@ -6,7 +6,7 @@ import '../assets/css/mywork.css'
 
 export default function MyWork() {
     const [ref, inView] = useInView({
-        threshold: window.innerWidth < 768 ? 0.2 : 0.5,
+        threshold: window.innerWidth < 768 ? 0.2 : 0.2,
         triggerOnce: true
     });
     const props = useSpring({
@@ -36,10 +36,9 @@ export default function MyWork() {
                                 </div>
                                 <div></div>
                                 <ul className="my-work-item-description">
-                                    {/* {item.description} */}
                                     {item.description.split(".").map((item, index) => {
                                         return (
-                                            <li>{item}</li>
+                                            <li key={index}>{item}</li>
                                         )
                                     })}
                                 </ul>

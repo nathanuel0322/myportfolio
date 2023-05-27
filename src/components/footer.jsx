@@ -13,7 +13,7 @@ export default function Footer() {
                 <a href='https://github.com/nathanuel0322' target='_blank' rel='noreferrer' id="githuba">
                     <Github className='gitfooter'/>
                 </a>
-                <a href={`${Resume}#zoom=62`} without rel='noreferrer' target='_blank' id="bottomresume">
+                <a href={`${Resume}#zoom=62`} rel='noreferrer' target='_blank' id="bottomresume">
                     View Resume
                 </a>
             </div>
