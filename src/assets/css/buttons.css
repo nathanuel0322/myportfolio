@@ -4,7 +4,8 @@
     padding: 0.6rem 2rem;
     border-radius: 25px;
     transition: all .3s;
-    cursor: pointer;
     letter-spacing: 1px;
     font-weight: 500;
+    font-size: 110%;
+    font-size: 95%;
 }

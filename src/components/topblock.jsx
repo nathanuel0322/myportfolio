@@ -1,7 +1,6 @@
 import { useRef, useEffect } from "react";
 import Typed from "typed.js";
 import '../assets/css/topblock.css';
-import { colors } from "../GlobalStyles";
 import { useInView } from 'react-intersection-observer';
 import { useSpring, animated } from 'react-spring';
 
@@ -50,7 +49,7 @@ export default function TopBlock() {
                     <div className="typed-text pb-3 display-1-top">
                         <span className="section-subtitle fonts-style white display-1-top">I am Nathanuel and a </span>
                         <br id="midspanbr" />
-                        <span className="animated-element bold" style={{ whiteSpace: 'pre', color: colors.yellow, fontWeight: 700 }} ref={el} />
+                        <span className="animated-element bold" style={{ whiteSpace: 'pre', color: "#ffbc00", fontWeight: 700 }} ref={el} />
                     </div>
                     <animated.p className="section-text fonts-style display-5" style={topblockspring}>
                         Specialized in Web and App Development

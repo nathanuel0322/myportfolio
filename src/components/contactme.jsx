@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import '../assets/css/contactme.css';
-import { colors } from '../GlobalStyles';
 import { useSpring, animated } from 'react-spring';
 import { useInView } from 'react-intersection-observer';
 
@@ -57,7 +56,7 @@ export default function ContactMe() {
                 </animated.div>
                 <animated.textarea style={textareaprops} name="message" placeholder='Message*'></animated.textarea>
                 <input type="email" value="nathan0322@hotmail.com" name='to_email' style={{display: 'none'}} readOnly={true} />
-                <animated.input type="submit" value="SEND" className='buttoncomp' id="sendform" style={Object.assign({}, props, {backgroundColor: hovering ? '#C38000' : colors.yellow})} onMouseOver={() => setHovering(true)} onMouseOut={() => setHovering(false)} />
+                <animated.input type="submit" value="SEND" className='buttoncomp' id="sendform" style={Object.assign({}, props, {backgroundColor: hovering ? '#C38000' : "#ffbc00"})} onMouseOver={() => setHovering(true)} onMouseOut={() => setHovering(false)} />
             </animated.form>
     );
 }
