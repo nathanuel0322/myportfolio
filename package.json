@@ -1,8 +1,17 @@
 {
   "homepage": "https://nathanuel0322.github.io/myportfolio/",
   "name": "myportfolio",
-  "version": "0.1.0",
   "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "vite build",
+    "dev": "vite serve",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.6",
@@ -22,30 +31,13 @@
     "typed.js": "^2.0.12",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.1",
+    "vite": "^4.3.9",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-svgr": "^3.2.0"
   }
 }

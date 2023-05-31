@@ -6,7 +6,7 @@ import '../assets/css/mywork.css'
 
 export default function MyWork() {
     const [ref, inView] = useInView({
-        threshold: window.innerWidth < 768 ? 0.2 : 0.2,
+        threshold: 0.125,
         triggerOnce: true
     });
     const props = useSpring({
@@ -26,6 +26,7 @@ export default function MyWork() {
             <animated.div style={textprops}>
                 {
                     projects.map((item, index) => {
+                        const innerstrs = item.description.split(".")
                         return (
                             <div key={index} className="my-work-item">
                                 <div>
@@ -36,9 +37,21 @@ export default function MyWork() {
                                 </div>
                                 <div></div>
                                 <ul className="my-work-item-description">
-                                    {item.description.split(".").map((item, index) => {
+                                    {innerstrs.map((item, index) => {
                                         return (
-                                            <li key={index}>{item}</li>
+                                            <li key={index}>
+                                                {/* find "|" within the string, if any */}
+                                                {item.split("|").map((subitem, subindex) => {
+                                                    if (subindex % 2 === 0) {
+                                                        return (
+                                                            <span key={subindex}>{subitem}</span>
+                                                        )
+                                                    }
+                                                    return (
+                                                        <span key={subindex} className="highlighted">{subitem}</span>
+                                                    )
+                                                })}
+                                            </li>
                                         )
                                     })}
                                 </ul>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 import {FiMenu} from 'react-icons/fi';
+import circlelogo from '../assets/images/circlelogo.png';
 import '../assets/css/header.css';
 
 export default function Header({drawerfunc}) {
@@ -23,7 +24,7 @@ export default function Header({drawerfunc}) {
             <animated.nav className={`navbar navbar-dropdown navbar-fixed-top navbar-expand-lg ${!transparent && 'navbar-short'}`} style={navspring}>
                 <div className="navbar-brand">
                     <span className="navbar-logo">
-                        <animated.img src={require("../assets/images/circlelogo.png")} alt="Logo" className='logo'
+                        <animated.img src={circlelogo} alt="Logo" className='logo'
                             style={{ width: !transparent ? '3rem' : '3.75rem' }}
                         />
                     </span>

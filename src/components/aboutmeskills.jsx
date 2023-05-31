@@ -1,7 +1,8 @@
 import '../assets/css/aboutmeskills.css'
 import { useSpring, animated } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
-import {ReactComponent as Github} from '../assets/icons/githubicon.svg'
+import { ReactComponent as Github } from '../assets/icons/githubicon.svg'
+import linkedin from '../assets/icons/linkedin.png'
 import Resume from "../assets/files/MyResume.pdf"
 
 export default function AboutMeSkills() {
@@ -33,7 +34,7 @@ export default function AboutMeSkills() {
                 <animated.p style={{...props[3], ...props[0] }}> I tend to be a perfectionist when I'm programming, where small differences between mockups and the final product really bother me. Moreover, I'm a fast learner who aims to simultaneously learn and improve on established skills.</animated.p>
                 <animated.div style={props[4]}>
                     <a href='https://www.linkedin.com/in/nathanueldixon0322/' target='_blank' rel='noreferrer'>
-                        <img src={require('../assets/icons/linkedin.png')} alt='LinkedIn' />
+                        <img src={linkedin} alt='LinkedIn' />
                     </a>
                     <a href='https://github.com/nathanuel0322' target='_blank' rel='noreferrer'>
                         <Github />

@@ -12,9 +12,15 @@
     font-size: 2rem;
     font-weight: 300;
 }
-#my-work > :nth-child(1) > span{
+#my-work > :nth-child(1) > span {
     border-bottom: 2px solid #ffbc00;
     padding-bottom: 0.5rem;
+}
+.highlighted {
+    border-bottom: 2px solid #ffbc00;
+    padding-bottom: 0.15rem;
+    color: darkorange;
+    font-weight: 600;
 }
 #my-work > :nth-child(2) {
     margin-top: 2rem;
@@ -47,7 +53,6 @@
     }
 }
 .my-work-item > :first-child {
-    /* height: 15rem; */
     width: 15rem;
     display: flex;
     align-items: center;
@@ -73,6 +78,8 @@
     text-align: left;
     padding-left: 1rem;
     margin-block: 1vh;
+    line-height: 1.55;
+    font-weight: 500;
 }
 .my-work-item-description > li::marker {
     content: "→";

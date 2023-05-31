@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { colors } from "../GlobalStyles";
 import '../assets/css/buttons.css';
 import { useState } from "react";
