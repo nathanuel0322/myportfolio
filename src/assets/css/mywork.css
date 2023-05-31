@@ -80,6 +80,7 @@
     margin-block: 1vh;
     line-height: 1.55;
     font-weight: 500;
+    font-size: 110%;
 }
 .my-work-item-description > li::marker {
     content: "→";
