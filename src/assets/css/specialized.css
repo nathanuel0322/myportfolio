@@ -51,6 +51,10 @@
     flex-shrink: 0;
     -webkit-flex-shrink: 0 !important;
 }
+#specializedtitle {
+    display: flex;
+    justify-content: center;
+}
 .align-left {
     text-align: left;
 }

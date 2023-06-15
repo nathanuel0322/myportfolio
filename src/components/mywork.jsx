@@ -56,6 +56,13 @@ export default function MyWork() {
                                     })}
                                 </ul>
                                 <Button href={item.link1} text={item.inprogress ? "In Progress" : "View Project"} external={true} />
+                                {item.sourceCode &&
+                                    <button className="srccode buttoncomp"
+                                        onClick={() => window.open(item.sourceCode, "_blank")}
+                                    >
+                                        View Source Code
+                                    </button>
+                                }
                             </div>
                         )  
                     })

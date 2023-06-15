@@ -18,7 +18,7 @@ export default function Specialized() {
     })
     return (
         <animated.div ref={ref} style={props} className="cid-rzMr7rM4hq" id="fortes">
-            <h2 className='section-title align-center display-2'>
+            <h2 id="specializedtitle" className='section-title align-center display-2'>
                 I'M SPE
                 <span>CIAL</span>
                 IZED IN

@@ -62,6 +62,14 @@
     width: 5rem;
     border-bottom: 2px solid #ffbc00;
 }
+.srccode {
+    background-color: darkgray;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.srccode:hover {  
+    background-color: gray; 
+}
 .my-work-item-title {
     text-align: center;
     font-size: 1.4rem;

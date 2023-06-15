@@ -26,6 +26,7 @@ export const projects = [
         description: "|ReactJS| site designed for a |mobile gaming business| in New Jersey.Features a streamlined slideshow with |fluid pop-up animations|.|Mobile-friendly| design.Created an API connected to |Firebase Storage|, allowing business owners to easily upload new images to their slideshow.Includes a contact form that sends an email to the business owners when a user submits a message, powered by |EmailJS|",
         link1: "http://www.tripleamobilegaming.com/#/",
         inprogress: false,
+        sourceCode: "https://github.com/nathanuel0322/TripleATruck"
     },
     {
         picture: truckImage,
