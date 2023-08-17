@@ -2,9 +2,16 @@ import aaaImage from './assets/images/aaa.webp';
 import truckImage from './assets/images/truck.png';
 import boofyImage from './assets/images/boofysupply.jpg';
 import portcalcImage from './assets/images/PortCalc.jpeg';
+import motivationImage from './assets/images/motivation.jpg'
 
 export const projects = [
-        // picture, Title, Description and Link
+    // picture, Title, Description and Link
+    {
+        picture: motivationImage,
+        title: "Motivational App",
+        description: "|Social Media App| for people to view and share motivational quotes with those across the world.Utilizes Firebase Authentication, Firestore, and Cloud Storage.Built on |React Native|.Allows user to choose an |emotion| and a |song| associated with their quote.|Collaborative| project",
+        inprogress: true,
+    },
     {
         picture: aaaImage,
         title: "AAA Maintenance Solutions",
