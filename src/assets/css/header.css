@@ -280,3 +280,6 @@ dl, ol, ul {
         line-height: calc( 1.4 * (1.35rem + (2 - 1.35) * ((100vw - 20rem) / (48 - 20))));
     }
 }
+.nav-link.link.text-warning.display-4:hover {
+    color: #ffbc00 !important;
+}

@@ -49,7 +49,7 @@ export default function AboutMeSkills() {
                 <animated.p style={{ ...props[5], ...props[1] }}>I have gotten hands on with various languages and frameworks, but I'd say that ReactJS and Javascript are my strengths when it comes to frontend development. I'm also familiar with HTML, CSS, Java, NodeJS, and ExpressJS. React Native is another framework that I've been working with during the past few months. I'm also very knowledgeable in Git and GitHub, and I've used them for both solo and collaborated projects.</animated.p>
                 <animated.div className='skills-list' style={props[6]}>
                     {
-                        [["ReactJS", 90], ["Java", 60], ["NodeJS", 80], ["ExpressJS", 100], ["React Native", 95]].map((skill, index) => {
+                        [["ReactJS", 95], ["Java", 75], ["NodeJS", 90], ["ExpressJS", 100], ["React Native", 95]].map((skill, index) => {
                             return (
                                 <div className='skill' key={index}>
                                     <div>

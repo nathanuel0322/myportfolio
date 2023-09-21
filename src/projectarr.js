@@ -8,7 +8,7 @@ export const projects = [
     // picture, Title, Description and Link
     {
         picture: motivationImage,
-        title: "Motivational App",
+        title: "LND's Motivational Media",
         description: "|Social Media App| for people to view and share motivational quotes with those across the world.Utilizes Firebase Authentication, Firestore, and Cloud Storage.Built on |React Native|.Allows user to choose an |emotion| and a |song| associated with their quote.|Collaborative| project",
         inprogress: true,
         sourceCode: "https://github.com/nathanuel0322/quotesapp"
