@@ -19,7 +19,6 @@
 }
 .topblock__content {
     font-weight: 400;
-    font-family: 'Dosis', sans-serif;
     color: white;
     display: flex;
     flex-direction: column;
@@ -85,7 +84,6 @@
     text-align: left;
 }
 .display-1-top {
-    font-family: 'Dosis', sans-serif;
     font-size: 3.5rem;
 }
 .section-title {

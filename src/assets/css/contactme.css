@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: "Dosis", sans-serif;
     font-size: 1rem;
     margin: 0px auto;
     height: 80vh;
@@ -63,8 +62,8 @@
 
 
 input, textarea {
-    font-family: "Dosis", sans-serif;
     font-size: 1.25rem;
+    font-family: 'Dosis Variable', sans-serif;
 }
 
 ::placeholder {
@@ -89,7 +88,6 @@ textarea {
 }
 
 .formfilled {
-    font-family: "Dosis", sans-serif;
     height: 29.6rem;
     margin: 5rem 20rem;
     display: flex;

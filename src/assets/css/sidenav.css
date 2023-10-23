@@ -9,7 +9,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: "Dosis", sans-serif;
     font-size: 20px;
     font-weight: 600;
 }
@@ -17,7 +16,6 @@
 .linkdiv > a {
     text-decoration: none;
     color: black; 
-    font-family: "Dosis", sans-serif;
     font-size: 1rem;
     font-weight: 600;
     margin: .665rem 1rem;               

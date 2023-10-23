@@ -15,11 +15,10 @@
     "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@fontsource-variable/dosis": "^5.0.17",
+    "@fontsource-variable/open-sans": "^5.0.18",
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.13",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -27,8 +26,7 @@
     "react-intersection-observer": "^9.4.1",
     "react-scripts": "5.0.1",
     "react-spring": "^9.5.5",
-    "typed.js": "^2.0.12",
-    "web-vitals": "^2.1.4"
+    "typed.js": "^2.0.12"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
