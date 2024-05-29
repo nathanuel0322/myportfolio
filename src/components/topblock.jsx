@@ -13,7 +13,7 @@ export default function TopBlock() {
     useEffect(() => {
         const options = {
             strings: [
-                'Web Developer',
+                'Full Stack Developer',
                 'Mobile App Developer',
                 'Goal Achiever',
             ],
@@ -52,7 +52,7 @@ export default function TopBlock() {
                         <span className="animated-element bold" style={{ whiteSpace: 'pre', color: "#ffbc00", fontWeight: 700 }} ref={el} />
                     </div>
                     <animated.p className="section-text fonts-style display-5" style={topblockspring}>
-                        Specialized in Web and App Development
+                        Specialized in Web, Backend, and App Development
                     </animated.p>
                     <animated.div className="pt-3 section-btn" style={topblockspring}>
                         <div className="btn-primary btn btn-md display-4" onClick={() => {
