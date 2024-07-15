@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
-import '../assets/css/contactme.css';
-import { useSpring, animated } from 'react-spring';
-import { useInView } from 'react-intersection-observer';
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import "../assets/css/contactme.css";
+import { useSpring, animated } from "react-spring";
+import { useInView } from "react-intersection-observer";
 
 export default function ContactMe() {
     const [hovering, setHovering] = useState(false);
@@ -10,53 +10,69 @@ export default function ContactMe() {
     const sendEmail = (e) => {
         e.preventDefault();
         // if any of the inputs or textarea are empty, then don't send the email
-        if (e.target[0].value === '' || e.target[1].value === '' || e.target[2].value === '') {
-            alert('Please fill out all the fields');
+        if (e.target[0].value === "" || e.target[1].value === "" || e.target[2].value === "") {
+            alert("Please fill out all the fields");
             return;
-        }
-        else {
+        } else {
             const formbutton = document.getElementById("sendform");
             formbutton.disabled = true;
             formbutton.value = "Sending...";
-            emailjs.sendForm('service_rb0yd56', 'template_879ls1m', '#contactme', 'dbCtiR00Etae1Fo2Q')
-                .then((result) => {
+            emailjs.sendForm("service_5wmanix", "template_879ls1m", "#contactme", "dbCtiR00Etae1Fo2Q").then(
+                (result) => {
                     setFormfilled(true);
-                    console.log(result.text);
-                }, (error) => {
+                    // console.log(result.text);
+                },
+                (error) => {
                     console.log(error.text);
-                });
+                }
+            );
         }
     };
     const [ref, InView] = useInView({
         threshold: 0.5,
-        triggerOnce: true
+        triggerOnce: true,
     });
     const props = useSpring({
         opacity: InView ? 1 : 0,
-        transform: InView ? 'translateY(0px)' : 'translateY(100px)'
+        transform: InView ? "translateY(0px)" : "translateY(100px)",
     });
     const textareaprops = useSpring({
         opacity: InView ? 1 : 0,
-        transform: InView ? 'translateY(0px)' : 'translateY(20rem)',
-        config: {duration: 750}
+        transform: InView ? "translateY(0px)" : "translateY(20rem)",
+        config: { duration: 750 },
     });
 
-    return (
-        formfilled ? 
-            <div className='formfilled' id="contactme">
-                <p style={{fontSize: '2.5rem'}}>Thank you for your message!</p>
-                <p style={{fontSize: '1.5rem'}}>I will get back to you as soon as possible.</p>
-            </div>
-        :
-            <animated.form ref={ref} className='contactme' id='contactme' onSubmit={sendEmail}>
-                <animated.p className="title" style={props}>Get in touch</animated.p>
-                <animated.div className='nameemail' style={props}>
-                    <input type="text" name="from_name" placeholder='Name*' className='neinputs' />
-                    <input type="email" name="user_email" placeholder='Email*' className='neinputs' />
-                </animated.div>
-                <animated.textarea style={textareaprops} name="message" placeholder='Message*'></animated.textarea>
-                <input type="email" value="nathan0322@hotmail.com" name='to_email' style={{display: 'none'}} readOnly={true} />
-                <animated.input type="submit" value="SEND" className='buttoncomp' id="sendform" style={Object.assign({}, props, {backgroundColor: hovering ? '#C38000' : "#ffbc00"})} onMouseOver={() => setHovering(true)} onMouseOut={() => setHovering(false)} />
-            </animated.form>
+    return formfilled ? (
+        <div className="formfilled" id="contactme">
+            <p style={{ fontSize: "2.5rem" }}>Thank you for your message!</p>
+            <p style={{ fontSize: "1.5rem" }}>I will get back to you as soon as possible.</p>
+        </div>
+    ) : (
+        <animated.form ref={ref} className="contactme" id="contactme" onSubmit={sendEmail}>
+            <animated.p className="title" style={props}>
+                Get in touch
+            </animated.p>
+            <animated.div className="nameemail" style={props}>
+                <input type="text" name="from_name" placeholder="Name*" className="neinputs" />
+                <input type="email" name="user_email" placeholder="Email*" className="neinputs" />
+            </animated.div>
+            <animated.textarea style={textareaprops} name="message" placeholder="Message*"></animated.textarea>
+            <input
+                type="email"
+                value="nathanthe6est@gmail.com"
+                name="to_email"
+                style={{ display: "none" }}
+                readOnly={true}
+            />
+            <animated.input
+                type="submit"
+                value="SEND"
+                className="buttoncomp"
+                id="sendform"
+                style={Object.assign({}, props, { backgroundColor: hovering ? "#C38000" : "#ffbc00" })}
+                onMouseOver={() => setHovering(true)}
+                onMouseOut={() => setHovering(false)}
+            />
+        </animated.form>
     );
 }

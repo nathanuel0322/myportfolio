@@ -1,40 +1,40 @@
 {
-  "homepage": "https://nathanuel0322.github.io/myportfolio/",
-  "name": "myportfolio",
-  "private": true,
-  "version": "0.1.0",
-  "type": "module",
-  "scripts": {
-    "build": "vite build",
-    "dev": "vite serve",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  },
-  "dependencies": {
-    "@emailjs/browser": "^3.10.0",
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
-    "@fontsource-variable/dosis": "^5.0.17",
-    "@fontsource-variable/open-sans": "^5.0.18",
-    "@mui/icons-material": "^5.11.11",
-    "@mui/material": "^5.11.13",
-    "gh-pages": "^4.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.8.0",
-    "react-intersection-observer": "^9.4.1",
-    "react-scripts": "5.0.1",
-    "react-spring": "^9.5.5",
-    "typed.js": "^2.0.12"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.0.0",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.1",
-    "vite": "^4.3.9",
-    "vite-plugin-html": "^3.2.0",
-    "vite-plugin-svgr": "^3.2.0"
-  }
+    "homepage": "https://nathanuel0322.github.io/myportfolio/",
+    "name": "myportfolio",
+    "private": true,
+    "version": "0.1.0",
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite serve",
+        "preview": "vite preview",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
+    },
+    "dependencies": {
+        "@emailjs/browser": "^3.10.0",
+        "@emotion/react": "^11.10.6",
+        "@emotion/styled": "^11.10.6",
+        "@fontsource-variable/dosis": "^5.0.17",
+        "@fontsource-variable/open-sans": "^5.0.18",
+        "@mui/icons-material": "^5.11.11",
+        "@mui/material": "^5.11.13",
+        "gh-pages": "^4.0.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-icons": "^4.8.0",
+        "react-intersection-observer": "^9.4.1",
+        "react-scripts": "5.0.1",
+        "react-spring": "^9.5.5",
+        "typed.js": "^2.0.12"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-react": "^4.0.0",
+        "eslint-plugin-react": "^7.32.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.4.1",
+        "vite": "^4.3.9",
+        "vite-plugin-html": "^3.2.0",
+        "vite-plugin-svgr": "^3.2.0"
+    }
 }

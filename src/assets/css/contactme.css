@@ -5,7 +5,9 @@
     font-size: 1rem;
     margin: 0px auto;
     height: 80vh;
-    padding: 10vh 0px;
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    padding-inline: 0px;
     color: white;
 }
 .nameemail {
@@ -13,7 +15,8 @@
     flex-direction: row;
     justify-content: space-between;
 }
-@media (max-width: 768px) {.nameemail {
+@media (max-width: 768px) {
+    .nameemail {
         flex-direction: column;
         margin-bottom: 0px !important;
     }
@@ -51,7 +54,8 @@
 #contactme > :first-child {
     color: white;
 }
-#contactme > div > *, #contactme > textarea {
+#contactme > div > *,
+#contactme > textarea {
     border-radius: 10px;
 }
 
@@ -60,10 +64,10 @@
     font-size: 2rem;
 }
 
-
-input, textarea {
+input,
+textarea {
     font-size: 1.25rem;
-    font-family: 'Dosis Variable', sans-serif;
+    font-family: "Dosis Variable", sans-serif;
 }
 
 ::placeholder {
@@ -77,7 +81,8 @@ input, textarea {
 #contactme > *:not(:last-child) {
     margin-bottom: 1rem;
 }
-textarea, .neinputs {
+textarea,
+.neinputs {
     border: 1px solid #ddd;
 }
 
