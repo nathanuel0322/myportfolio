@@ -3,5 +3,15 @@ body {
     font-family: "Dosis Variable", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+html,
+body {
     scroll-behavior: smooth;
+}
+/* Fallback for older iOS devices */
+@supports (-webkit-overflow-scrolling: touch) {
+    html,
+    body {
+        -webkit-overflow-scrolling: touch;
+    }
 }
