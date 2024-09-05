@@ -34,20 +34,8 @@ export default function TopBlock() {
         triggerOnce: true,
     });
 
-    const [debouncedInView, setDebouncedInView] = useState(inView);
-
-    useEffect(() => {
-        const handler = setTimeout(() => {
-            setDebouncedInView(inView);
-        }, 100);
-
-        return () => {
-            clearTimeout(handler);
-        };
-    }, [inView]);
-
     const topblockspring = useSpring({
-        opacity: debouncedInView ? 1 : 0,
+        opacity: inView ? 1 : 0,
         // transform: inView ? 'translateY(0)' : 'translateY(5rem)',
         config: { duration: 500, frequency: 0.5, damping: 0.5 },
     });
@@ -58,7 +46,7 @@ export default function TopBlock() {
                 <div className="row">
                     <div className="white col-md-12">
                         <animated.h1
-                            className="section-title white bold fonts-style display-1-top"
+                            className="section-title white bold fonts-style display-1-top text-right"
                             style={topblockspring}
                         >
                             Welcome to my Portfolio!

@@ -104,3 +104,6 @@ textarea {
 #sendform {
     border: none;
 }
+#invisble_email {
+    display: none;
+}

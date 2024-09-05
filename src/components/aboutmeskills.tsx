@@ -13,53 +13,29 @@ export default function AboutMeSkills() {
         triggerOnce: true,
     });
 
-    const [debouncedAboutRef, setDebouncedAboutRef] = useState(aboutinView);
-
-    useEffect(() => {
-        const handler = setTimeout(() => {
-            setDebouncedAboutRef(aboutinView);
-        }, 100);
-
-        return () => {
-            clearTimeout(handler);
-        };
-    }, [aboutinView]);
-
     const [skillref, skillinView] = useInView({
         threshold: window.innerWidth < 768 ? 0.2 : 0.5,
         triggerOnce: true,
     });
 
-    const [debouncedSkillRef, setDebouncedSkillRef] = useState(skillinView);
-
-    useEffect(() => {
-        const handler = setTimeout(() => {
-            setDebouncedSkillRef(skillinView);
-        }, 100);
-
-        return () => {
-            clearTimeout(handler);
-        };
-    }, [skillinView]);
-
     const props = [
-        useSpring({ opacity: debouncedAboutRef ? 1 : 0 }),
-        useSpring({ opacity: debouncedSkillRef ? 1 : 0 }),
-        useSpring({ transform: debouncedAboutRef ? "translateY(0px)" : "translateY(100px)" }),
+        useSpring({ opacity: aboutinView ? 1 : 0 }),
+        useSpring({ opacity: skillinView ? 1 : 0 }),
+        useSpring({ transform: aboutinView ? "translateY(0px)" : "translateY(100px)" }),
         useSpring({
-            transform: debouncedAboutRef ? "translateY(0px)" : "translateY(100px)",
+            transform: aboutinView ? "translateY(0px)" : "translateY(100px)",
             config: { duration: 600 },
         }),
         useSpring({
-            transform: debouncedAboutRef ? "translateY(0px)" : "translateY(100px)",
+            transform: aboutinView ? "translateY(0px)" : "translateY(100px)",
             config: { duration: 900 },
         }),
         useSpring({
-            transform: debouncedSkillRef ? "translateY(0px)" : "translateY(100px)",
+            transform: skillinView ? "translateY(0px)" : "translateY(100px)",
             config: { duration: 600 },
         }),
         useSpring({
-            transform: debouncedSkillRef ? "translateY(0px)" : "translateY(100px)",
+            transform: skillinView ? "translateY(0px)" : "translateY(100px)",
             config: { duration: 900 },
         }),
     ];

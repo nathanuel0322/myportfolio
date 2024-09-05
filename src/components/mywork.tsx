@@ -3,7 +3,7 @@ import Button from "./buttons";
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
 import "../assets/css/mywork.css";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 export default function MyWork() {
     const [ref, inView] = useInView({
@@ -11,30 +11,18 @@ export default function MyWork() {
         triggerOnce: true,
     });
 
-    const [debouncedInView, setDebouncedInView] = useState(inView);
-
-    useEffect(() => {
-        const handler = setTimeout(() => {
-            setDebouncedInView(inView);
-        }, 100);
-
-        return () => {
-            clearTimeout(handler);
-        };
-    }, [inView]);
-
     const props = useSpring({
-        opacity: debouncedInView ? 1 : 0,
+        opacity: inView ? 1 : 0,
     });
     const textprops = useSpring({
-        transform: debouncedInView ? "translateY(0px)" : "translateY(100px)",
+        transform: inView ? "translateY(0px)" : "translateY(100px)",
     });
 
     return (
         <animated.div id="my-work" ref={ref} style={props}>
             <p>
-                MY
-                <span> WO</span>
+                MY&nbsp;
+                <span>WO</span>
                 RK
             </p>
             <animated.div style={textprops}>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "../assets/css/contactme.css";
 import { useSpring, animated } from "react-spring";
@@ -29,30 +29,19 @@ export default function ContactMe() {
             );
         }
     };
+
     const [ref, InView] = useInView({
         threshold: 0.5,
         triggerOnce: true,
     });
 
-    const [debouncedInView, setDebouncedInView] = useState(InView);
-
-    useEffect(() => {
-        const handler = setTimeout(() => {
-            setDebouncedInView(InView);
-        }, 100);
-
-        return () => {
-            clearTimeout(handler);
-        };
-    }, [InView]);
-
     const props = useSpring({
-        opacity: debouncedInView ? 1 : 0,
-        transform: debouncedInView ? "translateY(0px)" : "translateY(100px)",
+        opacity: InView ? 1 : 0,
+        transform: InView ? "translateY(0px)" : "translateY(100px)",
     });
     const textareaprops = useSpring({
-        opacity: debouncedInView ? 1 : 0,
-        transform: debouncedInView ? "translateY(0px)" : "translateY(20rem)",
+        opacity: InView ? 1 : 0,
+        transform: InView ? "translateY(0px)" : "translateY(20rem)",
         config: { duration: 750 },
     });
 
@@ -72,7 +61,7 @@ export default function ContactMe() {
             </animated.div>
             <animated.textarea style={textareaprops} name="message" placeholder="Message*"></animated.textarea>
             <input
-                className="hidden"
+                id="invisble_email"
                 type="email"
                 value="nathanthe6est@gmail.com"
                 name="to_email"

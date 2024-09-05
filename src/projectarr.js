@@ -8,6 +8,14 @@ import AceWiseImage from "./assets/images/Acewise.png";
 export const projects = [
     // picture, Title, Description and Link
     {
+        picture: "https://widgie.vip/assets/mainimage-C5PYNVns.jpeg",
+        title: "widgie",
+        description: `|React| platform that makes displaying reviews and testimonials on a business owner's website |easy| and |customizable|
+        .Utilizes |Supabase| for database management and authentication.Implemented |Stripe| for subscription payments.Efficiently scrapes reviews from |Google|
+        and |Yelp| using |Puppeteer| and |NodeJS|`,
+        link1: "https://widgie.vip",
+    },
+    {
         picture: AceWiseImage,
         title: "AceWise",
         description: `|ReactJS| platform for over |550 students| across New York City to learn which careers are best suited for them.Provides

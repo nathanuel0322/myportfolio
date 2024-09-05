@@ -4,7 +4,6 @@ import { ReactComponent as Delivery } from "../assets/icons/mbri-delivery.svg";
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
 import "../assets/css/specialized.css";
-import { useEffect, useState } from "react";
 import React from "react";
 
 export default function Specialized() {
@@ -13,24 +12,13 @@ export default function Specialized() {
         triggerOnce: true,
     });
 
-    const [debouncedInView, setDebouncedInView] = useState(inView);
-
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-            setDebouncedInView(inView);
-        }, 100);
-
-        return () => {
-            clearTimeout(timeout);
-        };
-    }, [inView]);
-
     const props = useSpring({
-        opacity: debouncedInView ? 1 : 0,
+        opacity: inView ? 1 : 0,
     });
     const textprops = useSpring({
-        transform: debouncedInView ? "translateY(0px)" : "translateY(100px)",
+        transform: inView ? "translateY(0px)" : "translateY(100px)",
     });
+
     return (
         <animated.div ref={ref} style={props} className="cid-rzMr7rM4hq" id="fortes">
             <h2 id="specializedtitle" className="section-title align-center display-2">
