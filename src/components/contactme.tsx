@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "../assets/css/contactme.css";
 import { useSpring, animated } from "react-spring";
@@ -14,11 +14,12 @@ export default function ContactMe() {
             alert("Please fill out all the fields");
             return;
         } else {
-            const formbutton = document.getElementById("sendform");
+            const formbutton = document.getElementById("sendform") as HTMLButtonElement;
+            if (!formbutton) return;
             formbutton.disabled = true;
             formbutton.value = "Sending...";
             emailjs.sendForm("service_5wmanix", "template_879ls1m", "#contactme", "dbCtiR00Etae1Fo2Q").then(
-                (result) => {
+                () => {
                     setFormfilled(true);
                     // console.log(result.text);
                 },
@@ -32,20 +33,33 @@ export default function ContactMe() {
         threshold: 0.5,
         triggerOnce: true,
     });
+
+    const [debouncedInView, setDebouncedInView] = useState(InView);
+
+    useEffect(() => {
+        const handler = setTimeout(() => {
+            setDebouncedInView(InView);
+        }, 100);
+
+        return () => {
+            clearTimeout(handler);
+        };
+    }, [InView]);
+
     const props = useSpring({
-        opacity: InView ? 1 : 0,
-        transform: InView ? "translateY(0px)" : "translateY(100px)",
+        opacity: debouncedInView ? 1 : 0,
+        transform: debouncedInView ? "translateY(0px)" : "translateY(100px)",
     });
     const textareaprops = useSpring({
-        opacity: InView ? 1 : 0,
-        transform: InView ? "translateY(0px)" : "translateY(20rem)",
+        opacity: debouncedInView ? 1 : 0,
+        transform: debouncedInView ? "translateY(0px)" : "translateY(20rem)",
         config: { duration: 750 },
     });
 
     return formfilled ? (
         <div className="formfilled" id="contactme">
-            <p style={{ fontSize: "2.5rem" }}>Thank you for your message!</p>
-            <p style={{ fontSize: "1.5rem" }}>I will get back to you as soon as possible.</p>
+            <p className="text-4xl">Thank you for your message!</p>
+            <p className="text-2xl">I will get back to you as soon as possible.</p>
         </div>
     ) : (
         <animated.form ref={ref} className="contactme" id="contactme" onSubmit={sendEmail}>
@@ -58,10 +72,11 @@ export default function ContactMe() {
             </animated.div>
             <animated.textarea style={textareaprops} name="message" placeholder="Message*"></animated.textarea>
             <input
+                className="hidden"
                 type="email"
                 value="nathanthe6est@gmail.com"
                 name="to_email"
-                style={{ display: "none" }}
+                placeholder="Email"
                 readOnly={true}
             />
             <animated.input

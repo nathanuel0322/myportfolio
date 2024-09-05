@@ -10,6 +10,12 @@
 #my-work > :nth-child(1) {
     font-size: 2rem;
     font-weight: 300;
+    display: flex;
+}
+@media (min-width: 501px) {
+    #my-work > :nth-child(1) {
+        display: block;
+    }
 }
 #my-work > :nth-child(1) > span {
     border-bottom: 2px solid #ffbc00;
@@ -66,8 +72,8 @@
     cursor: pointer;
     margin-top: 1rem;
 }
-.srccode:hover {  
-    background-color: gray; 
+.srccode:hover {
+    background-color: gray;
 }
 .my-work-item-title {
     text-align: center;

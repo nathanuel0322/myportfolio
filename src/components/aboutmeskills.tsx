@@ -4,6 +4,8 @@ import { useInView } from "react-intersection-observer";
 import { ReactComponent as Github } from "../assets/icons/githubicon.svg";
 import linkedin from "../assets/icons/linkedin.png";
 import Resume from "../assets/files/MyResume.pdf";
+import { useEffect, useState } from "react";
+import React from "react";
 
 export default function AboutMeSkills() {
     const [aboutref, aboutinView] = useInView({
@@ -11,19 +13,55 @@ export default function AboutMeSkills() {
         triggerOnce: true,
     });
 
+    const [debouncedAboutRef, setDebouncedAboutRef] = useState(aboutinView);
+
+    useEffect(() => {
+        const handler = setTimeout(() => {
+            setDebouncedAboutRef(aboutinView);
+        }, 100);
+
+        return () => {
+            clearTimeout(handler);
+        };
+    }, [aboutinView]);
+
     const [skillref, skillinView] = useInView({
         threshold: window.innerWidth < 768 ? 0.2 : 0.5,
         triggerOnce: true,
     });
 
+    const [debouncedSkillRef, setDebouncedSkillRef] = useState(skillinView);
+
+    useEffect(() => {
+        const handler = setTimeout(() => {
+            setDebouncedSkillRef(skillinView);
+        }, 100);
+
+        return () => {
+            clearTimeout(handler);
+        };
+    }, [skillinView]);
+
     const props = [
-        useSpring({ opacity: aboutinView ? 1 : 0 }),
-        useSpring({ opacity: skillinView ? 1 : 0 }),
-        useSpring({ transform: aboutinView ? "translateY(0px)" : "translateY(100px)" }),
-        useSpring({ transform: aboutinView ? "translateY(0px)" : "translateY(100px)", config: { duration: 600 } }),
-        useSpring({ transform: aboutinView ? "translateY(0px)" : "translateY(100px)", config: { duration: 900 } }),
-        useSpring({ transform: skillinView ? "translateY(0px)" : "translateY(100px)", config: { duration: 600 } }),
-        useSpring({ transform: skillinView ? "translateY(0px)" : "translateY(100px)", config: { duration: 900 } }),
+        useSpring({ opacity: debouncedAboutRef ? 1 : 0 }),
+        useSpring({ opacity: debouncedSkillRef ? 1 : 0 }),
+        useSpring({ transform: debouncedAboutRef ? "translateY(0px)" : "translateY(100px)" }),
+        useSpring({
+            transform: debouncedAboutRef ? "translateY(0px)" : "translateY(100px)",
+            config: { duration: 600 },
+        }),
+        useSpring({
+            transform: debouncedAboutRef ? "translateY(0px)" : "translateY(100px)",
+            config: { duration: 900 },
+        }),
+        useSpring({
+            transform: debouncedSkillRef ? "translateY(0px)" : "translateY(100px)",
+            config: { duration: 600 },
+        }),
+        useSpring({
+            transform: debouncedSkillRef ? "translateY(0px)" : "translateY(100px)",
+            config: { duration: 900 },
+        }),
     ];
 
     return (
@@ -45,10 +83,10 @@ export default function AboutMeSkills() {
                     improve on established skills.
                 </animated.p>
                 <animated.div style={props[4]}>
-                    <a href="https://www.linkedin.com/in/nathanueldixon0322/" target="_blank" rel="noreferrer">
+                    <a href="https://www.linkedin.com/in/nathanueldixon0322/" target="_blank" rel="noreferrer noopener">
                         <img src={linkedin} alt="LinkedIn" />
                     </a>
-                    <a href="https://github.com/nathanuel0322" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/nathanuel0322" target="_blank" rel="noreferrer noopener">
                         <Github />
                     </a>
                     <a href={`${Resume}#zoom=25`} rel="noreferrer" target="_blank" id="resumebutton">
