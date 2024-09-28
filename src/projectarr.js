@@ -8,7 +8,7 @@ import AceWiseImage from "./assets/images/Acewise.png";
 export const projects = [
     // picture, Title, Description and Link
     {
-        picture: "https://widgie.vip/assets/mainimage-C5PYNVns.jpeg",
+        picture: "https://i.ibb.co/vQk5rLp/mainimage.jpg",
         title: "widgie",
         description: `|React| platform that makes displaying reviews and testimonials on a business owner's website |easy| and |customizable|
         .Utilizes |Supabase| for database management and authentication.Implemented |Stripe| for subscription payments.Efficiently scrapes reviews from |Google|
