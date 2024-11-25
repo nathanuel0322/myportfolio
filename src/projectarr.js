@@ -4,6 +4,7 @@ import boofyImage from "./assets/images/boofysupply.jpg";
 import portcalcImage from "./assets/images/PortCalc.jpeg";
 import motivationImage from "./assets/images/motivation.jpg";
 import AceWiseImage from "./assets/images/Acewise.png";
+import PGOWPImage from "./assets/images/PrestigiousPoster.jpg";
 
 export const projects = [
     // picture, Title, Description and Link
@@ -51,8 +52,7 @@ export const projects = [
         sourceCode: "https://github.com/nathanuel0322/aaa",
     },
     {
-        picture:
-            "https://www.prestigiousgamingonwheelsplus.com/static/media/PrestigiousPoster.527b03711e91f951842c.jpg",
+        picture: PGOWPImage,
         title: "Prestigious Gaming on Wheels Plus",
         description:
             "|ReactJS| site that includes several tabs displaying information.On-site |E-invite creation| for Prestigious Gaming on Wheels Plus, a mobile gaming truck business. Integration of a |web-scraping review widget| I built to scan for Yelp and Google reviews using Puppeteer and NodeJS",
@@ -75,7 +75,7 @@ export const projects = [
         title: "San Francisco Food Trucks",
         description:
             "|ReactJS| site that displays a list of food trucks in San Francisco, using data from the |San Francisco Data API|.Includes a search bar that filters the list of food trucks based on the user's input.|Light and dark mode| for user preference.Clean linear gradients for |modern look|.|Smooth animations| for truck information display",
-        link1: "https://nathanuel0322.github.io/foodtruckmap/",
+        link1: "https://foodtruckmap.pages.dev/",
         inprogress: false,
         sourceCode: "https://github.com/nathanuel0322/foodtruckmap",
     },
