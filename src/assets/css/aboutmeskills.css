@@ -8,36 +8,31 @@
     padding-top: 10vh;
     padding-bottom: 5vh;
 }
+
 @media (min-width: 1120px) {
     #aboutme-skills {
         padding-top: 15vh;
     }
 }
-.aboutme,
-.skills {
+
+#aboutme-skills > div {
     width: 50%;
     padding: 3rem;
 }
+
 @media (max-width: 768px) {
     #aboutme-skills {
         flex-direction: column;
         min-height: 80vh;
         height: auto;
     }
-    .aboutme,
-    .skills {
+
+    #aboutme-skills > div {
         max-width: 100%;
         width: auto;
     }
 }
 
-.aboutme {
-    background-color: rgb(195, 128, 0);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
 #aboutme > :last-child {
     display: flex;
     flex-direction: row;
@@ -45,9 +40,9 @@
     column-gap: 1vw;
 }
 
-.aboutme p {
-    font-size: 1.4rem;
-    font-weight: 400;
+#aboutme p {
+    font-size: 1.25rem;
+    font-weight: 500;
 }
 
 .skills {
@@ -58,9 +53,6 @@
     font-size: 1.3rem;
 }
 
-.aboutme > a {
-    text-decoration: none;
-}
 #resumebutton {
     background-color: black;
     color: white;

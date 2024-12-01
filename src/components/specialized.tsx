@@ -1,10 +1,9 @@
-import { ReactComponent as Apple } from "../assets/icons/mbri-apple.svg";
-import { ReactComponent as Global } from "../assets/icons/mbri-globe-2.svg";
-import { ReactComponent as Delivery } from "../assets/icons/mbri-delivery.svg";
+import GlobalIcon from "../assets/icons/mbri-globe-2.svg?react";
+import AppleIcon from "../assets/icons/mbri-apple.svg?react";
+import DeliveryIcon from "../assets/icons/mbri-delivery.svg?react";
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
 import "../assets/css/specialized.css";
-import React from "react";
 
 export default function Specialized() {
     const [ref, inView] = useInView({
@@ -29,17 +28,17 @@ export default function Specialized() {
             <animated.div className="justify-content-center pt-5" id="specialtypes" ref={ref} style={textprops}>
                 {[
                     [
-                        <Global />,
+                        <GlobalIcon />,
                         "WEB DEVELOPMENT",
                         "I have built several websites, most built on ReactJS, for businesses in the Tri-State Area, and am currently working on various projects.",
                     ],
                     [
-                        <Apple />,
+                        <AppleIcon />,
                         "APP DEVELOPMENT",
                         "I've completed an app that eases viewing worker hours and clocking in and out for a small contracting business in New York City. I am also actively working on another app that will greatly help to expand the customer base of urban small businesses.",
                     ],
                     [
-                        <Delivery />,
+                        <DeliveryIcon />,
                         "IMPLEMENTATION",
                         "I'm able to view a design of an app/website and transition it into a seamlessly clean and simplistic product.",
                     ],

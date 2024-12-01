@@ -1,0 +1,41 @@
+#experience-div li::marker {
+    content: "→";
+    color: black;
+}
+
+.highlighted-white {
+    border-bottom: 2px solid white;
+    padding-bottom: 0.15rem;
+    font-weight: 600;
+}
+
+#experience-div > div > ul {
+    padding-inline-start: 20px;
+}
+
+@media (max-width: 768px) {
+    #experience-div > div {
+        align-items: flex-start;
+    }
+
+    #experience-div > div > div {
+        align-items: flex-start;
+        gap: 4px;
+    }
+}
+
+@media (max-width: 500px) {
+    #experience-div > div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #experience-div > div > div {
+        width: 100%;
+        align-items: center;
+    }
+
+    #experience-div > div > ul {
+        width: 90%;
+    }
+}

@@ -1,9 +1,8 @@
 import { projects } from "../projectarr";
-import Button from "./buttons";
+import Button from "./Buttons";
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
 import "../assets/css/mywork.css";
-import React from "react";
 import { colors } from "../GlobalStyles";
 import WidgieHome from "../assets/images/widgie-home.webp";
 import WidgiePlans from "../assets/images/widgie-plans.webp";
@@ -28,7 +27,7 @@ export default function MyWork() {
 
     return (
         <animated.div id="my-work" ref={ref} style={props}>
-            <p>
+            <p className="section-title">
                 MY&nbsp;
                 <span>WO</span>
                 RK

@@ -1,11 +1,9 @@
 import "../assets/css/aboutmeskills.css";
 import { useSpring, animated } from "react-spring";
 import { useInView } from "react-intersection-observer";
-import { ReactComponent as Github } from "../assets/icons/githubicon.svg";
-import linkedin from "../assets/icons/linkedin.png";
+import GithubIcon from "../assets/icons/githubicon.svg?react";
+import LinkedinImage from "../assets/icons/linkedin.png";
 import Resume from "../assets/files/MyResume.pdf";
-import { useEffect, useState } from "react";
-import React from "react";
 
 export default function AboutMeSkills() {
     const [aboutref, aboutinView] = useInView({
@@ -42,9 +40,13 @@ export default function AboutMeSkills() {
 
     return (
         <div className="aboutme-skills" id="aboutme-skills">
-            <animated.div className="aboutme" id="aboutme" ref={aboutref}>
+            <animated.div
+                className="gap-2 bg-custom_yellow text-black flex flex-col items-start justify-center"
+                id="aboutme"
+                ref={aboutref}
+            >
                 <animated.h1 style={props[0]}>
-                    ABOUT <span style={{ color: "black" }}>ME</span>
+                    ABOUT <span className="text-black">ME</span>
                 </animated.h1>
                 <animated.p style={{ ...props[2], ...props[0] }}>
                     Hi! I'm Nathanuel, a graduate from New York University with a Bachelor's Degree in Computer Science.
@@ -60,10 +62,10 @@ export default function AboutMeSkills() {
                 </animated.p>
                 <animated.div style={props[4]}>
                     <a href="https://www.linkedin.com/in/nathanueldixon0322/" target="_blank" rel="noreferrer noopener">
-                        <img src={linkedin} alt="LinkedIn" />
+                        <img src={LinkedinImage} alt="LinkedIn" />
                     </a>
-                    <a href="https://github.com/nathanuel0322" target="_blank" rel="noreferrer noopener">
-                        <Github />
+                    <a href="https://github.com/nathanuel0322" target="_blank" rel="noreferrer noopener" title="GitHub">
+                        <GithubIcon />
                     </a>
                     <a href={`${Resume}#zoom=25`} rel="noreferrer" target="_blank" id="resumebutton">
                         View Resume

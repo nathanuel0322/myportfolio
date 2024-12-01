@@ -5,6 +5,7 @@ import portcalcImage from "./assets/images/PortCalc.jpeg";
 import motivationImage from "./assets/images/motivation.jpg";
 import AceWiseImage from "./assets/images/Acewise.png";
 import PGOWPImage from "./assets/images/PrestigiousPoster.jpg";
+import MobuImage from "./assets/images/mobulogowbackground.png";
 
 export const projects = [
     // picture, Title, Description and Link
@@ -15,14 +16,6 @@ export const projects = [
         .Utilizes |Supabase| for database management and authentication.Implemented |Stripe| for subscription payments.Efficiently scrapes reviews from |Google|
         and |Yelp| using |Puppeteer| and |NodeJS|`,
         link1: "https://widgie.vip",
-    },
-    {
-        picture: AceWiseImage,
-        title: "AceWise",
-        description: `|ReactJS| platform for over |550 students| across New York City to learn which careers are best suited for them.Provides
-        the resources and information needed to make |informed decisions| about their future careers.Utilizes |Supabase| for database management
-        and authentication, and |BackBlaze| for secure file storage`,
-        inprogress: true,
     },
     {
         title: "A Better Influence",
@@ -95,5 +88,33 @@ export const projects = [
         link1: "https://ncportfoliocalculator.netlify.app/",
         inprogress: false,
         sourceCode: "https://github.com/nathanuel0322/Portfolio-Calculator",
+    },
+];
+
+export const experiences = [
+    {
+        picture: AceWiseImage,
+        title: "AceWise",
+        description: `Developed an end-to-end web platform helping students from over 15 schools in New York City explore the career path that’s best
+        fit for them.Created a user authentication system with |Supabase| Authentication, enabling secure access across multiple devices for
+        personalized career guidance features.Implemented real-time notifications and surveys to improve student engagement with instructor updates,
+        which resulted in a |73% increase| in student survey completion rate, which allowed instructors to gather valuable feedback from a larger
+        portion of the student body`,
+        location: "New York, NY",
+        range: "Oct. 2023 - Nov. 2024",
+        role: "Full Stack Developer",
+    },
+    {
+        picture: MobuImage,
+        title: "Mobu",
+        description: `Leveraged |React Native| to develop a cross-platform mobile app, following Figma designs and mockups, resulting in a 60%
+        reduction in development time compared to native app development.Streamlined mobile app development by utilizing |Firebase|’s backend
+        solutions like Cloud Storage, Firestore, and Firebase Authentication, which reduced development time, resources, and cost needed for
+        back-end infrastructure.Identified and resolved 17 critical bugs within the mobile app’s architecture, which resulted in an elimination
+        of app crashes and a 36% improvement in user satisfaction, as measured by in-app surveys.Conducted a comprehensive performance evaluation
+        of the mobile app using automated and manual testing frameworks, which resulted in an 80% improvement in app loading time`,
+        location: "Remote",
+        range: "Mar. 2022 - Feb. 2023",
+        role: "Full Stack Developer",
     },
 ];
