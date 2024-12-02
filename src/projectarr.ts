@@ -85,7 +85,7 @@ export const projects = [
         title: "NCP's Portfolio Calculator",
         description:
             "ReactJS site, built on |ViteJS|, using |TailwindCSS| for styling, that calculates the value of a portfolio based on the user's input of stock symbols, their respective allocations, the start date, and the end date.Uses the |AlphaVantage API| to fetch stock data and calculate the value of the portfolio.Integrated |Firebase| for user authentication and storage of user's previous searches.Applied |Recharts| to seamlessly display a pie chart and line chart of the portfolio's value over time.Allows user to view |past searches| and view the results of those searches",
-        link1: "https://ncportfoliocalculator.netlify.app/",
+        link1: "https://portfolio-calculator.pages.dev",
         inprogress: false,
         sourceCode: "https://github.com/nathanuel0322/Portfolio-Calculator",
     },

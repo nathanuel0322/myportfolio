@@ -9,7 +9,7 @@ import TemporaryDrawer from "./components/TemporaryDrawer";
 import Experience from "./components/Experience";
 import AboutMeSkills from "./components/AboutMeSkills";
 import MyWork from "./components/MyWork";
-import Specialized from "./components/specialized";
+import Specialized from "./components/Specialized";
 
 function App() {
     const [drawerOpen, setDrawerOpen] = useState(false);
