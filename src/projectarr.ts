@@ -18,13 +18,13 @@ export const projects = [
         link1: "https://widgie.vip",
     },
     {
-        title: "A Better Influence",
+        title: "A Better Impact",
         description: `|ReactJS| platform for influencers to connect with climate-conscious brands and promote |sustainable products|.Uses |Supabase|
         for database management and authentication, and |BackBlaze| for secure file storage.Implemented |TikTok| and |Instagram| API to fetch creators'
         most recent statistics for brands and even other creators to view. Created a |beautifully modern| interface for users to easily navigate
         and connect with brands`,
         inprogress: false,
-        link1: "https://abetterinfluence.com/",
+        link1: "https://abimpact.co",
     },
     {
         picture: motivationImage,
