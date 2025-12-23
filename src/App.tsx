@@ -10,6 +10,7 @@ import Experience from "./components/Experience";
 import AboutMeSkills from "./components/AboutMeSkills";
 import MyWork from "./components/MyWork";
 import Specialized from "./components/Specialized";
+import MyHomelab from "./components/MyHomelab";
 
 function App() {
     const [drawerOpen, setDrawerOpen] = useState(false);
@@ -21,6 +22,7 @@ function App() {
             <Specialized />
             <Experience />
             <MyWork />
+            <MyHomelab />
             <AboutMeSkills />
             <ContactMe />
             <Footer />

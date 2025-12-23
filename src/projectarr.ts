@@ -81,6 +81,26 @@ export const projects = [
     },
 ];
 
+interface HomelabProject {
+    picture: string;
+    title: string;
+    description: string;
+    link1?: string;
+    inprogress: boolean;
+    sourceCode?: string;
+}
+
+export const homelabProjects: HomelabProject[] = [
+    {
+        picture: "https://brands.home-assistant.io/_/adguard/logo@2x.png",
+        title: "AdGuard Home",
+        description:
+            "|Proxmox VE| homelab on an old work laptop.Set up |AdGuard Home| in LXC |Container 100| using Tteck's installer.Configured |LAN DNS| to point to the container, and added |filter lists| for network‑wide blocking",
+        sourceCode: "https://tteck.github.io/Proxmox/#adguard-home-lxc",
+        inprogress: false,
+    },
+];
+
 export const experiences = [
     {
         picture: AceWiseImage,

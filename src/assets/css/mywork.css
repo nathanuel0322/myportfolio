@@ -1,4 +1,5 @@
-#my-work {
+#my-work,
+#my-homelab {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,16 +23,34 @@
 
 #my-work .section-title > span {
     border-bottom: 2px solid #ffbc00;
+}
+
+#my-homelab .section-title > span {
+    border-bottom: 2px solid black;
+}
+
+#my-work .section-title > span,
+#my-homelab .section-title > span {
     padding-bottom: 0.5rem;
+}
+
+.highlighted,
+.my-homelab-item-description .highlighted {
+    padding-bottom: 0.15rem;
+    font-weight: 600;
 }
 
 .highlighted {
     border-bottom: 2px solid #ffbc00;
-    padding-bottom: 0.15rem;
     color: darkorange;
-    font-weight: 600;
 }
-#my-work-items {
+
+.my-homelab-item-description .highlighted {
+    border-bottom: 2px solid white;
+    color: black;
+}
+#my-work-items,
+#my-homelab-items {
     margin-top: 2rem;
     display: flex;
     flex-direction: row;
@@ -39,7 +58,8 @@
     justify-content: center;
     flex-wrap: wrap;
 }
-.my-work-item {
+.my-work-item,
+.my-homelab-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,27 +67,35 @@
     margin: 1rem;
     width: 29%;
 }
+.my-homelab-item {
+    width: 45%;
+}
+
 @media (max-width: 768px) {
-    #my-work-items {
+    #my-work-items,
+    #my-homelab-items {
         flex-direction: column;
         max-width: 100vw;
         align-items: center;
         flex-wrap: wrap;
     }
-    .my-work-item {
+    .my-work-item,
+    .my-homelab-item {
         max-width: 100%;
         width: auto;
         max-width: 75%;
         margin-block: 1rem;
     }
 }
-.my-work-item > :first-child {
+.my-work-item > :first-child,
+.my-homelab-item > :first-child {
     width: 15rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.my-work-item > :nth-child(3) {
+.my-work-item > :nth-child(3),
+.my-homelab-item > :nth-child(3) {
     width: 5rem;
     border-bottom: 2px solid #ffbc00;
 }
@@ -79,13 +107,15 @@
 .srccode:hover {
     background-color: gray;
 }
-.my-work-item-title {
+.my-work-item-title,
+.my-homelab-item-title {
     text-align: center;
     font-size: 1.4rem;
     font-weight: 700;
     margin: 0.25rem 0;
 }
-.my-work-item-description {
+.my-work-item-description,
+.my-homelab-item-description {
     text-align: center;
     margin: 1rem 0;
     list-style-type: disc;
@@ -102,10 +132,19 @@ li {
 }
 
 .my-work-item-description > li::marker {
-    content: "→";
     color: orange;
 }
-.my-work-item > div > img {
+
+.my-homelab-item-description > li::marker {
+    color: black;
+}
+
+.my-work-item-description > li::marker,
+.my-homelab-item-description > li::marker {
+    content: "→";
+}
+.my-work-item > div > img,
+.my-homelab-item > div > img {
     height: auto;
     border-radius: 10px;
     width: 50%;

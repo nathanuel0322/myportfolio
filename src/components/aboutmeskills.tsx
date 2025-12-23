@@ -39,7 +39,7 @@ export default function AboutMeSkills() {
     ];
 
     return (
-        <div className="aboutme-skills" id="aboutme-skills">
+        <div className="aboutme-skills !pt-0" id="aboutme-skills">
             <animated.div
                 className="gap-2 bg-custom_yellow text-black flex flex-col items-start justify-center"
                 id="aboutme"
