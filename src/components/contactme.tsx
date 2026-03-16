@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import "../assets/css/contactme.css";
 import { useSpring, animated } from "react-spring";
@@ -7,27 +7,41 @@ import { useInView } from "react-intersection-observer";
 export default function ContactMe() {
     const [hovering, setHovering] = useState(false);
     const [formfilled, setFormfilled] = useState(false);
-    const sendEmail = (e) => {
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+        const form = e.currentTarget; // correctly typed as HTMLFormElement
+        const fd = new FormData(form);
+
+        const fromName = (fd.get("from_name") ?? "").toString().trim();
+        const userEmail = (fd.get("user_email") ?? "").toString().trim();
+        const message = (fd.get("message") ?? "").toString().trim();
+
         // if any of the inputs or textarea are empty, then don't send the email
-        if (e.target[0].value === "" || e.target[1].value === "" || e.target[2].value === "") {
+        if (!fromName || !userEmail || !message) {
+            console.log("Not filled:", { fromName, userEmail, message });
             alert("Please fill out all the fields");
             return;
-        } else {
-            const formbutton = document.getElementById("sendform") as HTMLButtonElement;
-            if (!formbutton) return;
-            formbutton.disabled = true;
-            formbutton.value = "Sending...";
-            emailjs.sendForm("service_5wmanix", "template_879ls1m", "#contactme", "dbCtiR00Etae1Fo2Q").then(
-                () => {
-                    setFormfilled(true);
-                    // console.log(result.text);
-                },
-                (error) => {
-                    console.log(error.text);
-                }
-            );
         }
+
+        const formbutton = form.querySelector<HTMLButtonElement>("#sendform");
+        if (!formbutton) return;
+        formbutton.disabled = true;
+        formbutton.textContent = "Sending...";
+        // Ensure the EmailJS template receives a `reply_to` field so replies go to the user's email.
+        // We populate a hidden input named "reply_to" from the user's email input before sending.
+        const replyInput = form.querySelector<HTMLInputElement>('input[name="reply_to"]');
+        if (replyInput) replyInput.value = userEmail;
+
+        emailjs.sendForm("service_5wmanix", "template_hlzbuxb", "#contactme", "dbCtiR00Etae1Fo2Q").then(
+            () => {
+                setFormfilled(true);
+                // console.log(result.text);
+            },
+            (error) => {
+                console.log(error.text);
+            },
+        );
     };
 
     const [ref, InView] = useInView({
@@ -60,14 +74,8 @@ export default function ContactMe() {
                 <input type="email" name="user_email" placeholder="Email*" className="neinputs" />
             </animated.div>
             <animated.textarea style={textareaprops} name="message" placeholder="Message*"></animated.textarea>
-            <input
-                id="invisble_email"
-                type="email"
-                value="nathanthe6est@gmail.com"
-                name="to_email"
-                placeholder="Email"
-                readOnly={true}
-            />
+            {/* Hidden field used by EmailJS templates as the reply-to address */}
+            <input type="hidden" name="reply_to" id="reply_to" />
             <animated.input
                 type="submit"
                 value="SEND"
