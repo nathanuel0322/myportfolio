@@ -49,7 +49,7 @@
                 "name": "Nathanuel Dixon",
                 "url": "https://nathanuel0322.github.io/myportfolio/",
                 "image": "https://nathanuel0322.github.io/myportfolio/circlelogo.png",
-                "jobTitle": "Full Stack Developer",
+                "jobTitle": ["Full Stack Developer", "SAT/STEM Instructor"],
                 "description": "Full stack developer specializing in web, backend, and mobile app development.",
                 "knowsAbout": [
                     "Web Development",
@@ -60,24 +60,33 @@
                     "Node.js",
                     "Supabase",
                     "Firebase",
-                    "TypeScript"
+                    "TypeScript",
+                    "SAT Tutoring",
+                    "STEM Instruction",
+                    "Home Assistant",
+                    "Proxmox VE",
+                    "Cloudflare Tunnel",
+                    "Self-hosting"
                 ],
                 "sameAs": ["https://github.com/nathanuel0322"]
             }
         </script>
-      <script type="module" crossorigin src="/myportfolio/assets/index-413d6613.js"></script>
+
+      <script type="module" crossorigin src="/myportfolio/assets/index-6cc94b18.js"></script>
       <link rel="stylesheet" href="/myportfolio/assets/index-ab9dccc5.css">
     </head>
     <body>
         <div id="root">
             <!-- Static fallback content for search engines and crawlers that do not execute JavaScript.
-                 React replaces this markup on load. -->
-            <main>
+                 Wrapped in <noscript> so browsers never render it (no flash of plain text); React
+                 renders the real app for everyone else, and JS-capable crawlers index that. -->
+            <noscript>
+            <main id="seo-fallback">
                 <h1>Nathanuel Dixon — Full Stack, Backend &amp; Mobile App Developer</h1>
                 <p>
                     I am Nathanuel Dixon, a full stack developer specialized in web, backend, and mobile app
-                    development. I build websites and cross-platform apps for businesses, mostly with React,
-                    React Native, Node.js, Supabase, and Firebase.
+                    development, and an SAT/STEM instructor. I build websites and cross-platform apps for
+                    businesses, mostly with React, React Native, Node.js, Supabase, and Firebase.
                 </p>
 
                 <h2>Experience</h2>
@@ -129,6 +138,12 @@
                         <a href="https://foodtruckmap.pages.dev/">foodtruckmap.pages.dev</a>
                     </li>
                     <li>
+                        <strong>Support BPCC</strong> — React + Vite website for the Boro Pregnancy
+                        Counseling Center, a Queens, NY nonprofit; multilingual content, donation and
+                        get-involved flows, and impact/story pages.
+                        <a href="https://www.supportbpcc.org/">supportbpcc.org</a>
+                    </li>
+                    <li>
                         <strong>Boofy Supply</strong> — HTML/CSS/JS UI integrated into Wix with a contact form.
                         <a href="https://www.boofysupplyllc.com/">boofysupplyllc.com</a>
                     </li>
@@ -140,9 +155,29 @@
                 </ul>
 
                 <h2>Homelab</h2>
-                <p>
-                    Proxmox VE homelab running AdGuard Home in an LXC container for network-wide DNS filtering.
-                </p>
+                <ul>
+                    <li>
+                        <strong>Proxmox VE server</strong> — hypervisor on a repurposed laptop hosting LXC
+                        containers and VMs for every homelab service, with scheduled backups and service
+                        isolation.
+                    </li>
+                    <li>
+                        <strong>Home Assistant</strong> — Home Assistant OS running as a VM on Proxmox,
+                        orchestrating 980+ entities across 50+ integrations: ZHA Zigbee, Matter and Thread,
+                        TP-Link Kasa, Philips Hue, Tuya, Broadlink, ESPHome, Apple TV, LG webOS, Ring, and a
+                        Bambu Lab 3D printer. Extended with HACS and exposed to Claude via the Model Context
+                        Protocol server integration for natural-language control.
+                    </li>
+                    <li>
+                        <strong>Cloudflare Tunnel</strong> — runs in an LXC container for secure remote access
+                        to homelab services without opening any router ports, with DNS and access policies
+                        managed in Cloudflare.
+                    </li>
+                    <li>
+                        <strong>AdGuard Home</strong> — LXC container acting as the LAN DNS server for
+                        network-wide ad and tracker blocking.
+                    </li>
+                </ul>
 
                 <h2>Contact</h2>
                 <p>
@@ -151,6 +186,7 @@
                     on this site.
                 </p>
             </main>
+            </noscript>
         </div>
         
     </body>
