@@ -13,7 +13,7 @@ export default function TopBlock() {
 
     useEffect(() => {
         const options = {
-            strings: ["Full Stack Developer", "Mobile App Developer", "Goal Achiever"],
+            strings: ["Full Stack Developer", "Mobile App Developer", "SAT/STEM Instructor", "Goal Achiever"],
             typeSpeed: 45,
             backSpeed: 45,
             loop: true,

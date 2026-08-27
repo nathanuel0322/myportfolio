@@ -63,6 +63,13 @@ export const projects = [
         sourceCode: "https://github.com/nathanuel0322/foodtruckmap",
     },
     {
+        title: "Support BPCC",
+        description:
+            "|ReactJS| site, built on |ViteJS|, for the |Boro Pregnancy Counseling Center|, a nonprofit in Queens, New York serving families facing unplanned pregnancy since 1989.|Multilingual| content across English, Spanish, and Chinese.Dedicated |donate| and |get involved| flows for financial gifts, in-kind items, and volunteering.|Impact| and client-story pages that surface the organization's yearly numbers",
+        link1: "https://www.supportbpcc.org/",
+        inprogress: false,
+    },
+    {
         picture: boofyImage,
         title: "Boofy Supply",
         description:
@@ -82,7 +89,7 @@ export const projects = [
 ];
 
 interface HomelabProject {
-    picture: string;
+    picture?: string;
     title: string;
     description: string;
     link1?: string;
@@ -92,11 +99,33 @@ interface HomelabProject {
 
 export const homelabProjects: HomelabProject[] = [
     {
+        picture: "https://brands.home-assistant.io/_/proxmoxve/logo@2x.png",
+        title: "Proxmox VE Server",
+        description:
+            "|Proxmox VE| hypervisor running on a repurposed work laptop, the foundation of my homelab.Hosts |LXC containers| and |VMs| for every service, provisioned largely with |community helper scripts|.Manages |scheduled backups|, resource limits, and isolation between services",
+        sourceCode: "https://community-scripts.github.io/ProxmoxVE/",
+        inprogress: false,
+    },
+    {
+        picture: "https://brands.home-assistant.io/_/homeassistant/logo@2x.png",
+        title: "Home Assistant",
+        description:
+            "|Home Assistant OS| running as a VM on the |Proxmox| server, orchestrating |980+ entities| across |50+ integrations|.Zigbee devices through a |ZHA| coordinator, plus |Matter| and |Thread| support.Connects |TP-Link Kasa|, |Philips Hue|, |Tuya|, |Broadlink| IR, |ESPHome|, Apple TV, LG webOS, AV receivers, |Ring|, and a |Bambu Lab| 3D printer.Custom |Jinja template| sensors, |history stats|, and several room-specific |dashboards|.Extended with |HACS|, and exposed to |Claude| through the |Model Context Protocol| server integration for natural-language control",
+        inprogress: false,
+    },
+    {
+        picture: "https://brands.home-assistant.io/_/cloudflare/logo@2x.png",
+        title: "Cloudflare Tunnel",
+        description:
+            "|Cloudflare Tunnel| running in an |LXC container| on Proxmox for |secure remote access| to homelab services |without opening any ports| on the router.Requests are proxied through |Cloudflare| with |DNS| and |access policies| managed from the Cloudflare dashboard",
+        inprogress: false,
+    },
+    {
         picture: "https://brands.home-assistant.io/_/adguard/logo@2x.png",
         title: "AdGuard Home",
         description:
-            "|Proxmox VE| homelab on an old work laptop.Set up |AdGuard Home| in LXC |Container 100| using Tteck's installer.Configured |LAN DNS| to point to the container, and added |filter lists| for network‑wide blocking",
-        sourceCode: "https://tteck.github.io/Proxmox/#adguard-home-lxc",
+            "|AdGuard Home| running in an |LXC container| on Proxmox, installed with a community helper script.Configured as the |LAN DNS| server with |filter lists| for network-wide ad and tracker blocking",
+        sourceCode: "https://community-scripts.github.io/ProxmoxVE/scripts?id=adguard",
         inprogress: false,
     },
 ];

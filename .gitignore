@@ -24,3 +24,5 @@ yarn-error.log*
 
 /dist
 tsconfig.tsbuildinfo
+# Vite transient config bundle
+vite.config.ts.timestamp-*
