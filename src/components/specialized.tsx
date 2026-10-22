@@ -1,7 +1,7 @@
 import GlobalIcon from "../assets/icons/mbri-globe-2.svg?react";
 import AppleIcon from "../assets/icons/mbri-apple.svg?react";
 import DeliveryIcon from "../assets/icons/mbri-delivery.svg?react";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
 import "../assets/css/specialized.css";
 

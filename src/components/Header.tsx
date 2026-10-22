@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated } from "@react-spring/web";
 import { FiMenu } from "react-icons/fi";
 import circlelogo from "../assets/images/circlelogo.png";
 import "../assets/css/header.css";

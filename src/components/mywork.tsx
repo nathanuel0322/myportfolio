@@ -1,6 +1,6 @@
 import { projects } from "../projectarr";
 import Button from "./Buttons";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
 import "../assets/css/mywork.css";
 import { colors } from "../GlobalStyles";

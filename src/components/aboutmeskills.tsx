@@ -1,5 +1,5 @@
 import "../assets/css/aboutmeskills.css";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
 import GithubIcon from "../assets/icons/githubicon.svg?react";
 import LinkedinImage from "../assets/icons/linkedin.png";

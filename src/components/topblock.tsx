@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import Typed from "typed.js";
 import "../assets/css/topblock.css";
 import { useInView } from "react-intersection-observer";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated } from "@react-spring/web";
 import React from "react";
 
 export default function TopBlock() {
