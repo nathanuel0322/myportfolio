@@ -100,9 +100,9 @@ interface HomelabProject {
 export const homelabProjects: HomelabProject[] = [
     {
         picture: "https://brands.home-assistant.io/_/proxmoxve/logo@2x.png",
-        title: "Proxmox VE Server",
+        title: "Proxmox VE Cluster",
         description:
-            "|Proxmox VE| hypervisor running on a repurposed work laptop, the foundation of my homelab.Hosts |LXC containers| and |VMs| for every service, provisioned largely with |community helper scripts|.Manages |scheduled backups|, resource limits, and isolation between services",
+            "|Proxmox VE| hypervisor cluster spanning |5 nodes| built from repurposed laptops and desktops, the foundation of my homelab.Hosts |LXC containers| and |VMs| for every service, provisioned largely with |community helper scripts|.|Proxmox Backup Server| runs nightly snapshot backups with retention and scheduled verification.Manages |resource limits|, |quorum|, and isolation between services across the cluster",
         sourceCode: "https://community-scripts.github.io/ProxmoxVE/",
         inprogress: false,
     },
@@ -110,14 +110,41 @@ export const homelabProjects: HomelabProject[] = [
         picture: "https://brands.home-assistant.io/_/homeassistant/logo@2x.png",
         title: "Home Assistant",
         description:
-            "|Home Assistant OS| running as a VM on the |Proxmox| server, orchestrating |980+ entities| across |50+ integrations|.Zigbee devices through a |ZHA| coordinator, plus |Matter| and |Thread| support.Connects |TP-Link Kasa|, |Philips Hue|, |Tuya|, |Broadlink| IR, |ESPHome|, Apple TV, LG webOS, AV receivers, |Ring|, and a |Bambu Lab| 3D printer.Custom |Jinja template| sensors, |history stats|, and several room-specific |dashboards|.Extended with |HACS|, and exposed to |Claude| through the |Model Context Protocol| server integration for natural-language control",
+            "|Home Assistant OS| running as a VM on the |Proxmox| cluster, orchestrating |980+ entities| across |50+ integrations|.Zigbee devices through a |ZHA| coordinator, plus |Matter| and |Thread| support.Connects |TP-Link Kasa|, |Philips Hue|, |Tuya|, |Broadlink| IR, |ESPHome|, Apple TV, LG webOS, AV receivers, |Ring|, and a |Bambu Lab| 3D printer.Custom |Jinja template| sensors, |history stats|, and several room-specific |dashboards|.Extended with |HACS|, and exposed to |Claude| through the |Model Context Protocol| server integration for natural-language control",
         inprogress: false,
+    },
+    {
+        picture: "https://brands.home-assistant.io/_/ollama/logo@2x.png",
+        title: "Local AI Inference Server",
+        description:
+            "|Ollama| serving a local LLM on a dedicated |GPU-equipped| node for private, fully offline AI tasks.|Whisper| speech-to-text and |Piper| text-to-speech power a local voice pipeline with no cloud round trip.A custom |speaker identification| model recognizes who is talking before acting on a voice command.Feeds |Home Assistant|'s voice assistant and an AI-generated doorbell description, keeping audio and video off the cloud",
+        inprogress: false,
+    },
+    {
+        picture: "https://brands.home-assistant.io/_/frigate/logo@2x.png",
+        title: "Frigate NVR",
+        description:
+            "|Frigate| running in an LXC container with |iGPU-accelerated| object detection for real-time camera analysis.Face recognition identifies known people at the front door and feeds the AI doorbell notification pipeline.Tuned detection zones and motion masks to cut down false positives from weather, headlights, and passing cars",
+        inprogress: false,
+    },
+    {
+        title: "Jarvis Voice Assistant Robot",
+        description:
+            "A |Raspberry Pi|-based robot with wake-word detection, |APA102 LEDs|, and a fully local speech pipeline for hands-free control of the smart home.|Speaker identification| gates sensitive actions, like unlocking a door, behind a recognized voice and a spoken confirmation.Integrates with |Claude| for natural-language conversation, home status reports, and spoken announcements.Built end to end: SBC provisioning, voice hardware, and the control software running on it",
+        inprogress: true,
     },
     {
         picture: "https://brands.home-assistant.io/_/cloudflare/logo@2x.png",
         title: "Cloudflare Tunnel",
         description:
             "|Cloudflare Tunnel| running in an |LXC container| on Proxmox for |secure remote access| to homelab services |without opening any ports| on the router.Requests are proxied through |Cloudflare| with |DNS| and |access policies| managed from the Cloudflare dashboard",
+        inprogress: false,
+    },
+    {
+        picture: "https://brands.home-assistant.io/_/tailscale/logo@2x.png",
+        title: "Tailscale Mesh VPN",
+        description:
+            "|Tailscale| connects every node in the cluster over an encrypted mesh for secure remote administration from anywhere.Runs alongside the Cloudflare Tunnel for family-facing services, with no ports ever forwarded on the router",
         inprogress: false,
     },
     {
@@ -128,9 +155,27 @@ export const homelabProjects: HomelabProject[] = [
         sourceCode: "https://community-scripts.github.io/ProxmoxVE/scripts?id=adguard",
         inprogress: false,
     },
+    {
+        picture: "https://brands.home-assistant.io/_/uptime_kuma/logo@2x.png",
+        title: "Monitoring & Status Dashboard",
+        description:
+            "|Uptime Kuma| monitors every service across the cluster with push-based alerting.A |Homepage| dashboard gives an at-a-glance view of the lab and quick links into each service.Alerts route through |Home Assistant| so they land on the devices I actually use",
+        inprogress: false,
+    },
 ];
 
 export const experiences = [
+    {
+        title: "Infinite Academics",
+        description: `Tutor |SAT|, |ACT|, and STEM subjects for a roster of |15+ students|, running live sessions over |Zoom| booked
+        through |Square Appointments|.Maintain detailed per-student |Notion| logs tracking score history, strengths, gaps, and
+        techniques taught, including |Desmos|-based methods for the math section.Build out each student's private |Thinkific| course
+        after every session with recordings, homework, and curated practice question sets.Building internal automation tooling that
+        turns daily bookings into session-plan checklists and generates Notion recaps and Thinkific chapters from session transcripts`,
+        location: "On-site",
+        range: "Aug. 2026 - Present",
+        role: "Instructor",
+    },
     {
         picture: AceWiseImage,
         title: "AceWise",
