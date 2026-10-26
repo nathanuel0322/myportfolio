@@ -20,4 +20,4 @@ Import from `@react-spring/web`, not the `react-spring` umbrella package — the
 The "My Homelab" section is sourced from `../homelab` (a separate private repo). That repo's CLAUDE.md marks certain files/facts as secret (IPs, hostnames, tokens, internal file paths) — never copy those into this public repo. Only general, non-sensitive descriptions of services/architecture belong here.
 
 ## Known remaining vulnerabilities
-Tailwind v3's build-time dep chain (`chokidar`/`braces`/`micromatch`/`fast-glob`) accounts for all remaining `npm audit` findings as of `5f7d88c`. Fixing requires a Tailwind v4 migration — not yet done, deliberately deferred.
+Tailwind v3's build-time dep chain (`chokidar`/`braces`/`micromatch`/`fast-glob`) accounts for all remaining `npm audit` findings as of `5f7d88c`. GitHub's Dependabot rescan confirms this is down to 1 moderate alert. Fixing requires a Tailwind v4 migration — not yet done, deliberately deferred.
