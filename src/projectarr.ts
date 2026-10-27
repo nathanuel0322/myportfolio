@@ -18,19 +18,37 @@ export const projects = [
         link1: "https://widgie.vip",
     },
     {
+        title: "Infinite Academics Platform",
+        description:
+            "|Full stack| operations platform for Infinite Academics, the tutoring company I teach for.|React 19| and |Vite| frontend backed by an |Express 5| API and |PostgreSQL| through |Drizzle ORM|, with typed clients generated from an |OpenAPI| spec.Weekly |4R Scorecard| (Reviews, Referrals, Retention, Revenue) and utilization dashboards for tutors and managers.|Family portal|, online courses, in-app messaging, and a companion |mobile app|.Read-only |Square| bookings import and |Clerk| staff approval with an audit trail",
+        inprogress: true,
+    },
+    {
+        title: "Fishers of Men",
+        description:
+            "|React Native| app built with |Expo| for finding nearby churches and joining a home church community.Members share |prayer requests| and encouragement in each church's feed.|Supabase| backend with Postgres |row level security|, auth, storage, and |realtime| updates.Church directory imported from |OpenStreetMap| data.Church staff can |claim and verify| their listing, with moderation tools and report emails sent from a |Supabase Edge Function|",
+        inprogress: true,
+    },
+    {
+        title: "Baked Goods by Daniel",
+        description:
+            "|NextJS| and |React 19| site for a home bakery.Scrolling |marquee menu| and a featured dish showcase.Styled with |Tailwind CSS 4| and |React Bootstrap|.Social links so customers can follow the bakery",
+        link1: "https://bakedgoodsbydaniel.vercel.app",
+        inprogress: false,
+    },
+    {
         title: "A Better Impact",
         description: `|ReactJS| platform for influencers to connect with climate-conscious brands and promote |sustainable products|.Uses |Supabase|
         for database management and authentication, and |BackBlaze| for secure file storage.Implemented |TikTok| and |Instagram| API to fetch creators'
         most recent statistics for brands and even other creators to view. Created a |beautifully modern| interface for users to easily navigate
         and connect with brands`,
         inprogress: false,
-        link1: "https://abimpact.co",
     },
     {
         picture: motivationImage,
         title: "LND's Motivational Media",
         description:
-            "|Social Media App| for people to view and share motivational quotes with those across the world.Utilizes Firebase Authentication, Firestore, and Cloud Storage.Built on |React Native|.Allows user to choose an |emotion| and a |song| associated with their quote.|Collaborative| project",
+            "|Social Media App| for people to view and share motivational quotes with those across the world.Utilizes Firebase Authentication, Firestore, and Cloud Storage.Built on |React Native|.Allows user to choose an |emotion| and a |song| associated with their quote.|Light and dark mode| across the app.|Collaborative| project",
         inprogress: true,
         sourceCode: "https://github.com/nathanuel0322/quotesapp",
     },
@@ -48,7 +66,7 @@ export const projects = [
         picture: PGOWPImage,
         title: "Prestigious Gaming on Wheels Plus",
         description:
-            "|ReactJS| site that includes several tabs displaying information.On-site |E-invite creation| for Prestigious Gaming on Wheels Plus, a mobile gaming truck business. Integration of a |web-scraping review widget| I built to scan for Yelp and Google reviews using Puppeteer and NodeJS",
+            "|ReactJS| site for Prestigious Gaming on Wheels Plus, a mobile gaming truck business, deployed on |Cloudflare Pages|.Built-in |online booking| with open-time scheduling, add-ons, and |Stripe| deposits, replacing a third-party booking service.Bookings stored in |Cloudflare D1| with a password-protected admin page to approve or decline requests, automatic deposit refunds, and a subscribable |calendar feed|.In-browser |birthday e-invite| generation and a contact form protected by |Cloudflare Turnstile|.|SEO prerendering| and a web-scraping review widget that pulls Yelp and Google reviews",
         link1: "https://www.prestigiousgamingonwheelsplus.com/",
         inprogress: false,
         sourceCode: "https://github.com/nathanuel0322/pgowp",
@@ -134,6 +152,13 @@ export const homelabProjects: HomelabProject[] = [
         inprogress: true,
     },
     {
+        picture: "https://brands.home-assistant.io/_/immich/logo@2x.png",
+        title: "Self-Hosted Photos & Files",
+        description:
+            "|Immich| photo library and |Seafile| file sync running in a dedicated VM, replacing cloud photo storage for the whole family.Backed by a |2 TB| disk with nightly file-level backups.Desktop and mobile sync clients reach it remotely over |Tailscale|",
+        inprogress: false,
+    },
+    {
         picture: "https://brands.home-assistant.io/_/cloudflare/logo@2x.png",
         title: "Cloudflare Tunnel",
         description:
@@ -151,7 +176,7 @@ export const homelabProjects: HomelabProject[] = [
         picture: "https://brands.home-assistant.io/_/adguard/logo@2x.png",
         title: "AdGuard Home",
         description:
-            "|AdGuard Home| running in an |LXC container| on Proxmox, installed with a community helper script.Configured as the |LAN DNS| server with |filter lists| for network-wide ad and tracker blocking",
+            "|AdGuard Home| running in an |LXC container| on Proxmox, installed with a community helper script.Serves |DNS| to opted-in devices with |filter lists| for ad and tracker blocking",
         sourceCode: "https://community-scripts.github.io/ProxmoxVE/scripts?id=adguard",
         inprogress: false,
     },

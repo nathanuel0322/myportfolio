@@ -3,29 +3,22 @@ import "../assets/css/buttons.css";
 export default function Button({
     text,
     href,
-    external,
     dark,
+    className = "",
 }: {
     text: string;
     href: string | undefined;
-    external: boolean;
     dark?: boolean;
+    className?: string;
 }) {
-    const isinprogress = text === "In Progress";
+    const classes = `buttoncomp ${dark ? "!bg-black !text-white" : ""} ${className}`;
+    // "In Progress" (or a missing link) is a status label, not a control
+    if (text === "In Progress" || !href) {
+        return <span className={`${classes} cursor-default`}>{text}</span>;
+    }
     return (
-        <button
-            className={`buttoncomp ${isinprogress ? "cursor-default" : "cursor-pointer"} ${
-                dark ? "!bg-black !text-white" : ""
-            }`}
-            type="button"
-            onClick={() => {
-                if (!isinprogress && href) {
-                    if (external) window.open(href, "_blank");
-                    else document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "center" });
-                }
-            }}
-        >
+        <a className={`${classes} cursor-pointer`} href={href} target="_blank" rel="noreferrer noopener">
             {text}
-        </button>
+        </a>
     );
 }

@@ -66,9 +66,11 @@ export default function TopBlock() {
                             Specialized in Web, Backend, and App Development
                         </animated.p>
                         <animated.div className="pt-3 section-btn" style={topblockspring}>
-                            <div
+                            <a
+                                href="#aboutme-skills"
                                 className="btn-primary btn btn-md display-4"
-                                onClick={() => {
+                                onClick={(e) => {
+                                    e.preventDefault();
                                     const skillssection = document.getElementById("aboutme-skills");
                                     if (!skillssection) return;
                                     window.scrollTo({
@@ -81,7 +83,7 @@ export default function TopBlock() {
                                 }}
                             >
                                 ABOUT ME
-                            </div>
+                            </a>
                         </animated.div>
                     </div>
                 </div>

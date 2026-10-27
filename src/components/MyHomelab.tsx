@@ -29,7 +29,7 @@ export default function MyHomelab() {
                     const innerstrs = item.description.split(".");
                     return (
                         <div key={index} className="my-homelab-item">
-                            <div>{item.picture && <img src={item.picture} alt={item.title} />}</div>
+                            <div>{item.picture && <img src={item.picture} alt={item.title} loading="lazy" />}</div>
                             <div className="my-homelab-item-title">{item.title}</div>
                             <div></div>
                             <ul className="my-homelab-item-description">
@@ -55,18 +55,11 @@ export default function MyHomelab() {
                                 <Button
                                     href={item.link1}
                                     text={item.inprogress ? "In Progress" : "View Project"}
-                                    external={true}
                                     dark={true}
                                 />
                             )}
                             {item.sourceCode && (
-                                <button
-                                    type="button"
-                                    className="srccode buttoncomp !bg-black"
-                                    onClick={() => window.open(item.sourceCode, "_blank")}
-                                >
-                                    View Source Code
-                                </button>
+                                <Button href={item.sourceCode} text="View Source Code" className="srccode" dark={true} />
                             )}
                         </div>
                     );

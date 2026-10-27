@@ -64,7 +64,7 @@ export default function AboutMeSkills() {
                     <a href="https://www.linkedin.com/in/nathanueldixon0322/" target="_blank" rel="noreferrer noopener">
                         <img src={LinkedinImage} alt="LinkedIn" />
                     </a>
-                    <a href="https://github.com/nathanuel0322" target="_blank" rel="noreferrer noopener" title="GitHub">
+                    <a href="https://github.com/nathanuel0322" target="_blank" rel="noreferrer noopener" title="GitHub" aria-label="GitHub">
                         <GithubIcon />
                     </a>
                     <a href={`${Resume}#zoom=25`} rel="noreferrer" target="_blank" id="resumebutton">
@@ -77,11 +77,11 @@ export default function AboutMeSkills() {
                     MY <span>SKILLS</span>
                 </animated.h1>
                 <animated.p style={{ ...props[5], ...props[1] }}>
-                    I have gotten hands on with various languages and frameworks, but I'd say that ReactJS and
-                    Javascript are my strengths when it comes to frontend development. I'm also familiar with HTML, CSS,
-                    Java, NodeJS, and ExpressJS. React Native is another framework that I've been working with during
-                    the past few months. I'm also very knowledgeable in Git and GitHub, and I've used them for both solo
-                    and collaborated projects.
+                    I have gotten hands on with various languages and frameworks, but ReactJS and TypeScript are my
+                    strengths when it comes to frontend development, and I build cross-platform mobile apps with React
+                    Native and Expo. On the backend I work with NodeJS, ExpressJS, PostgreSQL, Supabase, and Firebase,
+                    and I deploy to Cloudflare and Vercel. I also run a five-node Proxmox homelab, and I'm very
+                    knowledgeable in Git and GitHub, which I've used for both solo and collaborative projects.
                 </animated.p>
             </animated.div>
         </div>

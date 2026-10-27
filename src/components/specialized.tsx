@@ -30,12 +30,12 @@ export default function Specialized() {
                     [
                         <GlobalIcon />,
                         "WEB DEVELOPMENT",
-                        "I have built several websites, most built on ReactJS, for businesses in the Tri-State Area, and am currently working on various projects.",
+                        "I have built several websites, most on ReactJS, for businesses and nonprofits in the Tri-State Area, from online booking with Stripe deposits to multilingual donation flows.",
                     ],
                     [
                         <AppleIcon />,
                         "APP DEVELOPMENT",
-                        "I've completed an app that eases viewing worker hours and clocking in and out for a small contracting business in New York City. I am also actively working on another app that will greatly help to expand the customer base of urban small businesses.",
+                        "I've shipped a React Native app to the App Store and Google Play that handles clocking in and out and viewing worker hours for a New York City contracting business. I'm now building Fishers of Men, a church community app on Expo and Supabase.",
                     ],
                     [
                         <DeliveryIcon />,

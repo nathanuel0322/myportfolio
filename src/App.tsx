@@ -7,9 +7,9 @@ import TopBlock from "./components/topblock";
 import Header from "./components/Header";
 import TemporaryDrawer from "./components/TemporaryDrawer";
 import Experience from "./components/Experience";
-import AboutMeSkills from "./components/AboutMeSkills";
-import MyWork from "./components/MyWork";
-import Specialized from "./components/Specialized";
+import AboutMeSkills from "./components/aboutmeskills";
+import MyWork from "./components/mywork";
+import Specialized from "./components/specialized";
 import MyHomelab from "./components/MyHomelab";
 
 function App() {

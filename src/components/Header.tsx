@@ -9,13 +9,9 @@ export default function Header({ drawerfunc }: { drawerfunc: React.Dispatch<Reac
     const [transparent, setTransparent] = useState(true);
 
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            if (window.scrollY === 0) {
-                setTransparent(true);
-            } else {
-                setTransparent(false);
-            }
-        });
+        const onScroll = () => setTransparent(window.scrollY === 0);
+        window.addEventListener("scroll", onScroll, { passive: true });
+        return () => window.removeEventListener("scroll", onScroll);
     }, []);
     const navspring = useSpring({ backgroundColor: transparent ? "transparent" : "white" });
 
@@ -29,35 +25,40 @@ export default function Header({ drawerfunc }: { drawerfunc: React.Dispatch<Reac
                     <span className="navbar-logo">
                         <animated.img
                             src={circlelogo}
-                            alt="Logo"
+                            alt=""
                             className="logo"
                             style={{ width: !transparent ? "3rem" : "3.75rem" }}
                         />
                     </span>
-                    <div
+                    <button
+                        type="button"
                         className="navbar-caption"
                         onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                         }}
                     >
                         Nathanuel's Portfolio
-                    </div>
+                    </button>
                 </div>
                 <div className="navbar-collapse collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav nav-dropdown">
                         {[
                             { text: "FORTES", id: "fortes" },
+                            { text: "EXPERIENCE", id: "experience-div" },
                             { text: "PROJECTS", id: "my-work" },
+                            { text: "HOMELAB", id: "my-homelab" },
                             { text: "ABOUT ME", id: "aboutme" },
                             { text: "MY SKILLS", id: "skills" },
                         ].map((item, index) => {
                             return (
                                 <li className="nav-item" key={index}>
-                                    <div
+                                    <a
+                                        href={`#${item.id}`}
                                         className={`nav-link link text-warning display-4 ${
                                             transparent ? "text-[#c1c1c1]" : "text-[darkslategray]"
                                         }`}
-                                        onClick={() => {
+                                        onClick={(e) => {
+                                            e.preventDefault();
                                             const itemdiv = document.getElementById(`${item.id}`);
                                             if (itemdiv)
                                                 window.scrollTo({
@@ -73,15 +74,17 @@ export default function Header({ drawerfunc }: { drawerfunc: React.Dispatch<Reac
                                         }}
                                     >
                                         {item.text}
-                                    </div>
+                                    </a>
                                 </li>
                             );
                         })}
                     </ul>
-                    <div
+                    <a
+                        href="#contactme"
                         id="contactmebutton"
                         className="section-btn btn btn-md btn-primary display-4"
-                        onClick={() => {
+                        onClick={(e) => {
+                            e.preventDefault();
                             const contactmediv = document.getElementById("contactme");
                             if (contactmediv) {
                                 window.scrollTo({
@@ -95,9 +98,9 @@ export default function Header({ drawerfunc }: { drawerfunc: React.Dispatch<Reac
                         }}
                     >
                         CONTACT ME
-                    </div>
+                    </a>
                 </div>
-                <button className="drawerbutton" onClick={() => drawerfunc(true)} type="button" title="Menu">
+                <button className="drawerbutton" onClick={() => drawerfunc(true)} type="button" title="Menu" aria-label="Open menu">
                     <FiMenu />
                 </button>
             </animated.nav>

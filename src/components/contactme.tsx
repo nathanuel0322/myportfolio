@@ -70,10 +70,10 @@ export default function ContactMe() {
                 Get in touch
             </animated.p>
             <animated.div className="nameemail" style={props}>
-                <input type="text" name="from_name" placeholder="Name*" className="neinputs" />
-                <input type="email" name="user_email" placeholder="Email*" className="neinputs" />
+                <input type="text" name="from_name" placeholder="Name*" aria-label="Name" autoComplete="name" className="neinputs" />
+                <input type="email" name="user_email" placeholder="Email*" aria-label="Email" autoComplete="email" className="neinputs" />
             </animated.div>
-            <animated.textarea style={textareaprops} name="message" placeholder="Message*"></animated.textarea>
+            <animated.textarea style={textareaprops} name="message" placeholder="Message*" aria-label="Message"></animated.textarea>
             {/* Hidden field used by EmailJS templates as the reply-to address */}
             <input type="hidden" name="reply_to" id="reply_to" />
             <animated.input

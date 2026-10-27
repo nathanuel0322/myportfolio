@@ -108,6 +108,7 @@ section {
     cursor: pointer;
     border: none;
     margin-left: 0.5rem;
+    font-family: inherit;
 }
 .drawerbutton {
     background-color: transparent;
@@ -256,12 +257,12 @@ ul {
         padding-left: 0.5rem;
     }
 }
-@media (max-width: 1140px) {
+@media (max-width: 1439px) {
     .navbar-expand-lg > .collapse {
         display: none;
     }
 }
-@media (min-width: 1140px) {
+@media (min-width: 1440px) {
     .drawerbutton {
         display: none;
     }
@@ -274,4 +275,15 @@ ul {
 }
 .nav-link.link.text-warning.display-4:hover {
     color: #ffbc00 !important;
+}
+
+/* six section links plus the contact button: tighten spacing so they stay on one row */
+@media (min-width: 1440px) {
+    .nav-dropdown .link {
+        padding: 0.667em 0.9em !important;
+        white-space: nowrap;
+    }
+    .cid-rzMrgNeUFf ul.navbar-nav {
+        flex-wrap: nowrap;
+    }
 }

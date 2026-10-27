@@ -10,6 +10,9 @@
     font-size: 95%;
     background-color: #ffbc00;
     border: none;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
 }
 .buttoncomp:hover {
     background-color: #C38000;

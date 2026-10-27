@@ -5,7 +5,7 @@ import linkedin from "../assets/icons/linkedin.png";
 
 export default function Footer() {
     return (
-        <div className="footer">
+        <footer className="footer">
             <p>Nathanuel's Portfolio</p>
             <div className="footericons">
                 <a
@@ -22,6 +22,7 @@ export default function Footer() {
                     rel="noreferrer noopener"
                     id="githuba"
                     title="GitHub"
+                    aria-label="GitHub"
                 >
                     <GithubIcon className="gitfooter" />
                 </a>
@@ -29,6 +30,6 @@ export default function Footer() {
                     View Resume
                 </a>
             </div>
-        </div>
+        </footer>
     );
 }

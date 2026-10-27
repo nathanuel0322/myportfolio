@@ -38,7 +38,7 @@ export default function MyWork() {
                 style={{ backgroundColor: colors.yellow }}
             >
                 <p id="new-project-p" className="text-2xl font-bold">
-                    NEW PROJECT 🎉
+                    FEATURED PROJECT
                 </p>
                 <div id="new-project-inner" className="flex flex-row justify-between items-center gap-[2vw]">
                     <div id="new-project-item" className="my-work-item w-[30%] bg-black p-4 text-white rounded-xl">
@@ -67,22 +67,13 @@ export default function MyWork() {
                         <Button
                             href={projects[0].link1}
                             text={projects[0].inprogress ? "In Progress" : "View Project"}
-                            external={true}
                         />
-                        {projects[0].sourceCode && (
-                            <button
-                                className="srccode buttoncomp"
-                                onClick={() => window.open(projects[0].sourceCode, "_blank")}
-                            >
-                                View Source Code
-                            </button>
-                        )}
                     </div>
                     <div id="new-project-img-grid" className="grid grid-cols-2 gap-4 h-fit w-[70%] items-center">
-                        <img src={WidgieHome} alt="Widgie Home" />
-                        <img src={WidgiePlans} alt="Widgie Plans" />
-                        <img src={WidgieCustomize} alt="Widgie Customize" />
-                        <img src={WidgieAnimation} alt="Widgie Animation" />
+                        <img src={WidgieHome} alt="widgie home page" loading="lazy" />
+                        <img src={WidgiePlans} alt="widgie subscription plans" loading="lazy" />
+                        <img src={WidgieCustomize} alt="widgie widget customization screen" loading="lazy" />
+                        <img src={WidgieAnimation} alt="widgie review widget animating on a site" loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -91,7 +82,7 @@ export default function MyWork() {
                     const innerstrs = item.description.split(".");
                     return (
                         <div key={index} className="my-work-item">
-                            <div>{item.picture && <img src={item.picture} alt={item.title} />}</div>
+                            <div>{item.picture && <img src={item.picture} alt={item.title} loading="lazy" />}</div>
                             <div className="my-work-item-title">{item.title}</div>
                             <div></div>
                             <ul className="my-work-item-description">
@@ -113,18 +104,14 @@ export default function MyWork() {
                                     );
                                 })}
                             </ul>
-                            <Button
-                                href={item.link1}
-                                text={item.inprogress ? "In Progress" : "View Project"}
-                                external={true}
-                            />
+                            {(item.link1 || item.inprogress) && (
+                                <Button
+                                    href={item.link1}
+                                    text={item.inprogress ? "In Progress" : "View Project"}
+                                />
+                            )}
                             {item.sourceCode && (
-                                <button
-                                    className="srccode buttoncomp"
-                                    onClick={() => window.open(item.sourceCode, "_blank")}
-                                >
-                                    View Source Code
-                                </button>
+                                <Button href={item.sourceCode} text="View Source Code" className="srccode" />
                             )}
                         </div>
                     );
