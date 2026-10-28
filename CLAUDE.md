@@ -37,3 +37,7 @@ The "My Homelab" section is sourced from `../homelab` (a separate private repo).
 
 ## Known remaining vulnerabilities
 Tailwind v3's build-time dep chain (`chokidar`/`braces`/`micromatch`/`fast-glob`) accounts for all remaining `npm audit` findings as of `5f7d88c`. GitHub's Dependabot rescan confirms this is down to 1 moderate alert. Fixing requires a Tailwind v4 migration — not yet done, deliberately deferred.
+
+## Spelling and grammar
+
+`copycheck` (`~/SideWork/copycheck`) checks user-facing text with cspell and a local LanguageTool server. The local pre-commit hook runs `copycheck --staged --warn`, so it only warns; it lives in `.git/hooks`, not the repo, so a fresh clone needs `copycheck hook`. Run `copycheck` before committing copy changes and fix real mistakes. Proper nouns and project words go in `cspell.json`.
