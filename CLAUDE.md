@@ -7,6 +7,9 @@ React + Vite + TypeScript portfolio site, deployed to GitHub Pages via `gh-pages
 - `npm run build` — production build
 - `npm run deploy` — build + publish `dist/` to GitHub Pages
 
+## Workflow
+The repo has a single maintainer, so don't open pull requests. Work on a branch if you like, then merge it into `master` and push.
+
 ## Content data pattern
 Project/experience content lives in `src/projectarr.ts` as typed arrays (`projects`, `homelabProjects`, `experiences`), consumed by `src/components/MyHomelab.tsx` and `src/components/Experience.tsx`. Don't hardcode copy in components — edit the arrays instead.
 
