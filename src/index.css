@@ -1,5 +1,15 @@
-@tailwind components;
-@tailwind utilities;
+/*
+ * Tailwind v4, CSS-first config. Preflight is deliberately not imported: the
+ * v3 setup never loaded `@tailwind base`, and the hand-written CSS relies on
+ * browser defaults. Utilities are imported unlayered so they keep v3's cascade
+ * against the unlayered custom CSS (layered rules would always lose to it).
+ */
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css";
+
+@theme {
+    --color-custom_yellow: #ffbc00;
+}
 
 body {
     margin: 0;

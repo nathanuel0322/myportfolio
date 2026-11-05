@@ -34,9 +34,17 @@ The "My Homelab" section is sourced from `../homelab` (a separate private repo).
 ## Dependency vulnerability history
 - `esbuild` (GHSA-67mh-4wv8-2f99, dev-server request forgery) — fixed in `a9b5449` by bumping `vite` ^4.5.5 → ^6.4.3 (pulls esbuild 0.25+); `@vitejs/plugin-react` and `vite-plugin-svgr` bumped alongside for compatibility.
 - `js-yaml` (CVE-2026-59869/59870, quadratic-CPU DoS via YAML merge keys) — fixed by `npm audit fix` plus removal of the `react-spring` umbrella package's React Native toolchain in `5f7d88c`, which was the other source of the vulnerable 3.x line.
+- Tailwind v3 build chain (`chokidar`/`braces`/`micromatch`/`fast-glob`, the last Dependabot alert): fixed by migrating to Tailwind v4 (`tailwindcss` ^4 + `@tailwindcss/vite`), which drops `postcss`/`autoprefixer` and the v3 file watcher/glob dependencies.
 
 ## Known remaining vulnerabilities
-Tailwind v3's build-time dep chain (`chokidar`/`braces`/`micromatch`/`fast-glob`) accounts for all remaining `npm audit` findings as of `5f7d88c`. GitHub's Dependabot rescan confirms this is down to 1 moderate alert. Fixing requires a Tailwind v4 migration — not yet done, deliberately deferred.
+None. Tailwind v3's build-time dep chain (`chokidar`/`braces`/`micromatch`/`fast-glob`), the source of the last Dependabot alert, was removed by the Tailwind v4 migration (see below). `npm audit` reports 0 vulnerabilities. `fast-glob`/`micromatch`/`braces` are still in the tree via `gh-pages` → `globby`, at patched versions.
+
+## Tailwind v4
+- Tailwind v4 is wired in through `@tailwindcss/vite` in `vite.config.ts`. There is no `tailwind.config.js` or `postcss.config.js`; the config is CSS-first, in `src/index.css` (`@theme` holds `--color-custom_yellow`).
+- Preflight is deliberately not imported. The v3 setup never loaded `@tailwind base`, and the hand-written CSS depends on browser defaults. Importing `tailwindcss` in full would pull preflight in.
+- `tailwindcss/utilities.css` is imported without a layer so utilities keep v3's cascade against the unlayered custom CSS. Layered utilities would always lose to it.
+- Important modifiers use the v4 trailing form (`bg-black!`, not `!bg-black`).
+- Before/after Playwright screenshots (full page at 375/1024/1440 px, plus the mobile drawer) matched pixel for pixel. The only difference was the frame shown by the animated widgie GIF.
 
 ## Spelling and grammar
 

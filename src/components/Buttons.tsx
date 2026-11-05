@@ -11,7 +11,7 @@ export default function Button({
     dark?: boolean;
     className?: string;
 }) {
-    const classes = `buttoncomp ${dark ? "!bg-black !text-white" : ""} ${className}`;
+    const classes = `buttoncomp ${dark ? "bg-black! text-white!" : ""} ${className}`;
     // "In Progress" (or a missing link) is a status label, not a control
     if (text === "In Progress" || !href) {
         return <span className={`${classes} cursor-default`}>{text}</span>;

@@ -19,7 +19,7 @@ export default function MyHomelab() {
     });
 
     return (
-        <animated.div id="my-homelab" ref={ref} style={props} className="!bg-custom_yellow !text-black">
+        <animated.div id="my-homelab" ref={ref} style={props} className="bg-custom_yellow! text-black!">
             <p className="section-title">
                 MY H<span>OME</span>
                 LAB

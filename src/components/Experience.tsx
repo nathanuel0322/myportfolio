@@ -31,7 +31,7 @@ export default function Experience() {
                         <ul className="w-3/4">
                             {innerstrs.map((item, index) => {
                                 return (
-                                    <li key={index} className="!font-semibold">
+                                    <li key={index} className="font-semibold!">
                                         {/* find "|" within the string, if any */}
                                         {item.split("|").map((subitem, subindex) => {
                                             if (subindex % 2 === 0) {
